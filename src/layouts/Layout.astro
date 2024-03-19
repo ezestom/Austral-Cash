@@ -1,0 +1,46 @@
+---
+import "@fontsource-variable/onest";
+import { ViewTransitions } from "astro:transitions";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="Te ayudamos a cambiar #DineroDigital de forma simple, segura y 100% online. ¡Contactanos!"
+		/>
+		<meta
+			name="keywords"
+			content="DineroDigital, cambio, criptomonedas, Payoneer, Paypal, Wise, Skrill, USDT, Crypto, pagos internacionales, realizar cambio"
+		/>
+		<meta name="author" content="Austral Cash" />
+		<meta name="robots" content="index, follow" />
+		<meta name="googlebot" content="index, follow" />
+		<meta name="canonical" content="https://australcash.com" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/white_logo_only.png" />
+		<meta name="theme-color" content="#13151a" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body>
+		<slot />
+		<style is:global>
+			html {
+				background: #13151a;
+			}
+			body {
+				font-family: "Onest Variable", sans-serif;
+			}
+		</style>
+	</body>
+</html>
