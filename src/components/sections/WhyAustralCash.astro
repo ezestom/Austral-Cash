@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { BlurVideo } from "../BlurVideo/BlurVideo.jsx";
+---
+
+<Layout title="Por qué Astral Cash?">
+	<article class="min-h-screen text-white mb-20 relative" id="whyAsutralCash">
+		<div
+			class="-z-10 absolute h-full w-full bg-[radial-gradient(#303030_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]">
+		</div>
+		<div class="flex flex-col justify-center items-center">
+			<h1 class="text-3xl md:text-5xl py-5 font-semibold">Por qué Astral Cash?</h1>
+			<p class="text-center text-lg px-5 max-w-[75ch] text-balance">
+				En Astral Cash, nos esforzamos por ofrecer a nuestros clientes
+				una experiencia de inversión única y personalizada. Y es que, en
+				Astral Cash, creemos que la inversión no debería ser un proceso
+				complicado y estresante.
+			</p>
+			<aside class="py-20">
+				<BlurVideo client:visible />
+			</aside>
+		</div>
+	</article>
+</Layout>

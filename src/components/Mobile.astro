@@ -147,7 +147,8 @@ import TextPresentation from "./TextPresentation.astro";
 		</div>
 	</article>
 
-	<div class="absolute right-0 bottom-20 flex items-center justify-center w-full">
+	<div
+		class="absolute right-0 bottom-20 flex items-center justify-center w-full">
 		<a
 			id="toggle_nav"
 			class="z-100 relative flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
@@ -156,7 +157,7 @@ import TextPresentation from "./TextPresentation.astro";
 				class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
 			></span>
 			<span
-				class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#13151a] to-[#202020] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl">
+				class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[black] to-[#13151a] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl">
 				<span class="relative font-semibold text-white"
 					>Cotizar mi pedido por WhatsApp</span
 				>
@@ -183,9 +184,9 @@ import TextPresentation from "./TextPresentation.astro";
 				scaleX(1);
 		}
 	}
-	@media(width < 1350px){
-		.phone{
-			display: none
+	@media (width < 1350px) {
+		.phone {
+			display: none;
 		}
 	}
 	.phone-back {

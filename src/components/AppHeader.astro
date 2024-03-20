@@ -3,17 +3,17 @@ import logo from "../img/white_logo_only.png";
 import Container from "./Container.astro";
 const links = [
 	{
-		to: "/#solution",
-		label: "Solución",
+		to: "/#steps",
+		label: "Solo en 4 pasos",
 	},
-	{
-		to: "/#features",
-		label: "Funcionalidades",
-	},
+	// {
+	// 	to: "/#features",
+	// 	label: "Funcionalidades",
+	// },
 
 	{
-		to: "/#why-cacta",
-		label: "¿Por qué Cacta?",
+		to: "/#whyAsutralCash",
+		label: "¿Por qué Austral Cash?",
 	},
 	{
 		to: "/#us",
@@ -78,7 +78,7 @@ const links = [
 				<div
 					class="relative z-20 flex w-full justify-between md:px-0 lg:w-max logo opacity-20 grayscale">
 					<a
-						href="/#home"
+						href="/#top"
 						aria-label="logo"
 						class="flex items-center space-x-2">
 						<!-- logo with css -->
@@ -120,7 +120,7 @@ const links = [
 					aria-hidden="true"
 					class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-white backdrop-blur-2xl transition duration-500 dark:bg-gray-900 lg:hidden">
 				</div>
-				<!-- <div
+				<div
 					id="navlinks"
 					class="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col justify-end gap-6 rounded-3xl border border-gray-100 bg-transparent p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:border-gray-700 dark:shadow-none flex-wrap lg:visible lg:relative lg:flex lg:w-fit lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:p-0 lg:opacity-100 lg:shadow-none">
 					<div
@@ -139,27 +139,9 @@ const links = [
 									</li>
 								))
 							}
-							
 						</ul>
 					</div>
-
-					<div class="mt-12 lg:mt-0">
-						<a
-							id="toggle_nav"
-							class="z-100 relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
-							href="/#contact">
-							<span
-								class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
-							></span>
-							<span
-								class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#007d67] to-[#00ff9a] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl">
-								<span class="relative font-semibold text-white"
-									>Contáctanos</span
-								>
-							</span>
-						</a>
-					</div>
-				</div> -->
+				</div>
 			</div>
 		</Container>
 	</nav>
@@ -180,13 +162,22 @@ const links = [
 		@media (width > 700px) {
 			@keyframes enhance-header {
 				to {
-					padding: 0.5rem 1rem;
-					backdrop-filter: blur(20px);
-					background: linear-gradient(
-						90deg,
-						rgba(0, 0, 0, 0.3),
-						rgba(0, 0, 0, 0.3)
-					);
+					height: 75px;
+					opacity: 1;
+					padding: 1rem;
+					position: relative;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					overflow: hidden;
+					border-radius: 0.75rem; /* Equivalente a rounded-xl */
+					border: 1px solid #4b5563; /* Equivalente a border-gray-800 */
+					background-image: linear-gradient(
+						to right,
+						#000000,
+						#000000
+					); /* Equivalente a bg-gradient-to-r from-black to-gray-950 */
+					box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Equivalente a shadow-2xl */
 					z-index: 50;
 				}
 			}
