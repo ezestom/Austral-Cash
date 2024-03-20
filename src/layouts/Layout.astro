@@ -35,6 +35,10 @@ const { title } = Astro.props;
 	<body>
 		<slot />
 		<style is:global>
+			:root {
+				--text: #514fff;
+				--bg: #13151a;
+			}
 			html {
 				background: #13151a;
 			}

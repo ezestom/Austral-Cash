@@ -1,5 +1,6 @@
 ---
 import Container from "../components/Container.astro";
+import TextPresentation from "./TextPresentation.astro";
 ---
 
 <Container>
@@ -8,208 +9,167 @@ import Container from "../components/Container.astro";
 			class="-z-10 absolute h-full w-full bg-[radial-gradient(#303030_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]">
 		</div>
 
-		<div class="text-white h-full">
-			<h1 class="text-3xl md:text-8xl font-black">Austral Cash</h1>
-			<h2 class="text-2xl py-5 font-semibold">
-				Te ayudamos a cambiar #DineroDigital <br /> de forma simple, segura
-				100% online.
-			</h2>
-			<h3 class="text-base pb-5">
-				Paypal, Payoneer, Wise, Skrill #USDT #CRYPTO, Pagos
-				Internacionales o Realizamos cambio.
-			</h3>
-			<aside class="flex flex-col gap-2">
-				<div class="flex gap-2">
-					<div
-						class="w-6 h-6 flex gap-8 items-center rounded-full bg-gradient-to-r from-[#1d1d1f] to-[#3a3b3f] 0 -z-1">
-						<p class="m-auto">1</p>
-					</div>
-					<code>Cotizas y haces tu pedido. </code>
+		<TextPresentation />
+		<div class="phone">
+			<div class="phone-back">
+				<div class="phone-left-side">
+					<div class="phone-antena"></div>
+					<div class="phone-button top"></div>
+					<div class="phone-button"></div>
+					<div class="phone-button bottom"></div>
+					<div class="phone-antena bottom"></div>
 				</div>
-
-				<div class="flex gap-2">
-					<div
-						class="w-6 h-6 flex gap-8 items-center rounded-full bg-gradient-to-r from-[#1d1d1f] to-[#3a3b3f] 0 -z-1">
-						<p class="m-auto">2</p>
+				<div class="phone-bottom">
+					<div class="phone-antena"></div>
+					<div class="bottom-speaker">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
 					</div>
-					<code>Recibes las instrucciones para hacer tu envío.</code>
-				</div>
-
-				<div class="flex gap-2">
-					<div
-						class="w-6 h-6 flex gap-8 items-center rounded-full bg-gradient-to-r from-[#1d1d1f] to-[#3a3b3f] 0 -z-1">
-						<p class="m-auto">3</p>
+					<div class="phone-screw">
+						<div></div>
 					</div>
-					<code>Te enviamos el saldo cotizado. </code>
-				</div>
-			</aside>
-			<div class="phone">
-				<div class="phone-back">
-					<div class="phone-left-side">
-						<div class="phone-antena"></div>
-						<div class="phone-button top"></div>
-						<div class="phone-button"></div>
-						<div class="phone-button bottom"></div>
-						<div class="phone-antena bottom"></div>
+					<div class="phone-charger"></div>
+					<div class="phone-screw right">
+						<div></div>
 					</div>
-					<div class="phone-bottom">
-						<div class="phone-antena"></div>
-						<div class="bottom-speaker">
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
-						</div>
-						<div class="phone-screw">
-							<div></div>
-						</div>
-						<div class="phone-charger"></div>
-						<div class="phone-screw right">
-							<div></div>
-						</div>
-						<div class="bottom-speaker right">
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
-						</div>
-						<div class="phone-antena right"></div>
+					<div class="bottom-speaker right">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
 					</div>
-				</div>
-				<div class="phone-screen"></div>
-				<div class="phone-display">
-					<div class="phone-notch">
-						<div class="phone-speaker"></div>
-					</div>
-					<div class="display-content">
-						<div class="notifications-bar">
-							<div class="time">9:41</div>
-							<div class="range"></div>
-							<div class="wifi"></div>
-							<div class="battery"></div>
-						</div>
-						<div class="nav">
-							<div class="messages"></div>
-							<div class="phone-number">+7 (999) 222-22-22</div>
-							<div class="menu"></div>
-						</div>
-						<div class="current-plan">
-							<div class="plan">
-								<div>
-									<div class="plan-header">Austral Cash</div>
-									<div class="plan-price">
-										<span>$</span>109.95
-									</div>
-								</div>
-								<div class="plan-date">
-									<div>JAN 28TH</div>
-									<div>FEB 28TH</div>
-								</div>
-							</div>
-							<div class="text-question">
-								Deseas obtener alguna cotización?<br
-								/>Contáctanos por WhatsApp.
-							</div>
-						</div>
-						<div class="plan-box">
-							<div class="plan-options">
-								<div>
-									<div>15<span>Cedears</span></div>
-									<div>dollar</div>
-								</div>
-								<div>
-									<div>150<span>Dollares</span></div>
-									<div>dollar</div>
-								</div>
-							</div>
-							<div class="plan-text">
-								<strong>Cotización gratis</strong>
-							</div>
-							<a class="change-plan" href=""
-								>Contáctanos por WhatsApp</a
-							>
-						</div>
-						<div class="plan-list">
-							<div class="plan-limit">
-								<div class="limit-text">
-									<div>
-										<strong>$3</strong><span
-											>Until February 28</span
-										>
-									</div>
-									<span class="limit-subtext"
-										>Unlimited Apps</span
-									>
-								</div>
-								<div class="limit-icon"></div>
-							</div>
-							<div class="plan-limit">
-								<div class="limit-text">
-									<div>
-										<strong>$0.15</strong><span
-											>Per SMS</span
-										>
-									</div>
-									<span class="limit-subtext"
-										>Remove the limit for $1.5</span
-									>
-								</div>
-								<div class="limit-icon upgrade"></div>
-							</div>
-						</div>
-						<div class="bottom-icons">
-							<div class="chart"><div></div></div>
-							<div class="eye"><div></div></div>
-							<div class="equalizer">
-								<div></div><div></div><div></div>
-							</div>
-						</div>
-						<div class="home-button"></div>
-					</div>
-				</div>
-				<div class="phone-reflections">
-					<div class="reflection-1"></div>
-					<div class="reflection-2"></div>
-					<div class="reflection-3"></div>
-					<div class="reflection-4"></div>
-					<div class="reflection-5"></div>
-					<div class="reflection-6"></div>
-					<div class="reflection-7"></div>
+					<div class="phone-antena right"></div>
 				</div>
 			</div>
-		</div>
-
-		<div class="absolute bottom-20 flex items-center justify-center w-full">
-			<a
-				id="toggle_nav"
-				class="z-100 relative flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
-				href="/#contact">
-				<span
-					class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
-				></span>
-				<span
-					class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#13151a] to-[#202020] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl">
-					<span class="relative font-semibold text-white"
-						>Cotizar mi pedido por WhatsApp</span
-					>
-				</span>
-			</a>
+			<div class="phone-screen"></div>
+			<div class="phone-display">
+				<div class="phone-notch">
+					<div class="phone-speaker"></div>
+				</div>
+				<div class="display-content">
+					<div class="notifications-bar">
+						<div class="time">9:41</div>
+						<div class="range"></div>
+						<div class="wifi"></div>
+						<div class="battery"></div>
+					</div>
+					<div class="nav">
+						<div class="messages"></div>
+						<div class="phone-number">+7 (999) 222-22-22</div>
+						<div class="menu"></div>
+					</div>
+					<div class="current-plan">
+						<div class="plan">
+							<div>
+								<div class="plan-header">Austral Cash</div>
+								<div class="plan-price">
+									<span>$</span>109.95
+								</div>
+							</div>
+							<div class="plan-date">
+								<div>JAN 28TH</div>
+								<div>FEB 28TH</div>
+							</div>
+						</div>
+						<div class="text-question">
+							Deseas obtener alguna cotización?<br />Contáctanos
+							por WhatsApp.
+						</div>
+					</div>
+					<div class="plan-box">
+						<div class="plan-options">
+							<div>
+								<div>15<span>Cedears</span></div>
+								<div>dollar</div>
+							</div>
+							<div>
+								<div>150<span>Dollares</span></div>
+								<div>dollar</div>
+							</div>
+						</div>
+						<div class="plan-text">
+							<strong>Cotización gratis</strong>
+						</div>
+						<a class="change-plan" href=""
+							>Contáctanos por WhatsApp</a
+						>
+					</div>
+					<div class="plan-list">
+						<div class="plan-limit">
+							<div class="limit-text">
+								<div>
+									<strong>$3</strong><span
+										>Until February 28</span
+									>
+								</div>
+								<span class="limit-subtext">Unlimited Apps</span
+								>
+							</div>
+							<div class="limit-icon"></div>
+						</div>
+						<div class="plan-limit">
+							<div class="limit-text">
+								<div>
+									<strong>$0.15</strong><span>Per SMS</span>
+								</div>
+								<span class="limit-subtext"
+									>Remove the limit for $1.5</span
+								>
+							</div>
+							<div class="limit-icon upgrade"></div>
+						</div>
+					</div>
+					<div class="bottom-icons">
+						<div class="chart"><div></div></div>
+						<div class="eye"><div></div></div>
+						<div class="equalizer">
+							<div></div><div></div><div></div>
+						</div>
+					</div>
+					<div class="home-button"></div>
+				</div>
+			</div>
+			<div class="phone-reflections">
+				<div class="reflection-1"></div>
+				<div class="reflection-2"></div>
+				<div class="reflection-3"></div>
+				<div class="reflection-4"></div>
+				<div class="reflection-5"></div>
+				<div class="reflection-6"></div>
+				<div class="reflection-7"></div>
+			</div>
 		</div>
 	</article>
+
+	<div class="absolute right-0 bottom-20 flex items-center justify-center w-full">
+		<a
+			id="toggle_nav"
+			class="z-100 relative flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
+			href="/#contact">
+			<span
+				class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
+			></span>
+			<span
+				class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#13151a] to-[#202020] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl">
+				<span class="relative font-semibold text-white"
+					>Cotizar mi pedido por WhatsApp</span
+				>
+			</span>
+		</a>
+	</div>
 </Container>
+
 <style>
 	body {
-		overflow: hidden;
+		overflow-x: hidden;
 	}
-	h1 {
-		background: linear-gradient(45deg, #514fff, #ecf0ff);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
+
 	.phone {
 		position: absolute;
 		right: 20%;
@@ -221,6 +181,11 @@ import Container from "../components/Container.astro";
 		.phone {
 			transform: rotate(-20deg) skewX(30deg) skewY(-10deg) scaleY(1)
 				scaleX(1);
+		}
+	}
+	@media(width < 1350px){
+		.phone{
+			display: none
 		}
 	}
 	.phone-back {

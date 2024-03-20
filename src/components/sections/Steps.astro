@@ -1,0 +1,57 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardSpotlight from "../CardSpotlight.jsx";
+import Container from "../Container.astro";
+import Fader from "../Fader.astro";
+import img1 from "../../icons/calculator.svg";
+import img2 from "../../icons/wallet.svg";
+import img3 from "../../icons/dollar.svg";
+import img4 from "../../icons/whatsapp.svg";
+---
+
+<Layout title="Stepts to follow">
+	<Container>
+		<article class="min-h-screen text-white mb-20 relative">
+			<div class="flex flex-col justify-center items-center">
+				<h1 class="text-5xl py-5 font-semibold">
+					Sigue los siguiente pasos
+				</h1>
+				<p>Para realizar tu transacción en 4 pasos.</p>
+			</div>
+
+			<div class="grid grid-col-1 md:grid-cols-2 my-20 gap-10">
+				<CardSpotlight
+					header="Paso 1 - Elegí tu monto"
+					main="Te mostraremos la oferta que tenemos para vos. Elegí el monto y las cuotas antes de continuar. Cuando estés listo, hacé click en el botón 'Continuar'."
+					footer="Completá tu información y validá tu celular. "
+					img={img1.src}
+					client:visible
+				/>
+				<CardSpotlight
+					header="Paso 1 - Elegí tu monto"
+					main="Te mostraremos la oferta que tenemos para vos. Elegí el monto y las cuotas antes de continuar. Cuando estés listo, hacé click en el botón 'Continuar'."
+					footer="Completá tu información y validá tu celular. "
+					img={img2.src}
+					client:visible
+				/>
+				<CardSpotlight
+					header="Paso 1 - Elegí tu monto"
+					main="Te mostraremos la oferta que tenemos para vos. Elegí el monto y las cuotas antes de continuar. Cuando estés listo, hacé click en el botón 'Continuar'."
+					footer="Completá tu información y validá tu celular. "
+					img={img3.src}
+					client:visible
+				/>
+				<CardSpotlight
+					header="Paso 1 - Elegí tu monto"
+					main="Te mostraremos la oferta que tenemos para vos. Elegí el monto y las cuotas antes de continuar. Cuando estés listo, hacé click en el botón 'Continuar'."
+					footer="Completá tu información y validá tu celular. "
+					img={img4.src}
+					client:visible
+				/>
+			</div>
+			<Fader />
+		</article>
+	</Container>
+</Layout>
+
+<style></style>
