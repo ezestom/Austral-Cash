@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import  { useRef, useState } from "react";
 
 const CardSpotlight = ({ header, main, footer, img }) => {
 	const divRef = useRef(null);
