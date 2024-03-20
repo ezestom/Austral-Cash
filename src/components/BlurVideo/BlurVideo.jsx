@@ -38,7 +38,7 @@ export function BlurVideo() {
 					open
 					className="z-50 fixed h-screen w-screen top-0 left-0 bg-transparent backdrop-blur">
 					<iframe
-						className="m-auto bottom-0 top-0 left-0 right-0 absolute p-1 w-[95%] md:w-[50%] aspect-video rounded-lg border border-[#4e737a] shadow-2xl"
+						className="m-auto bottom-0 top-0 left-0 right-0 absolute p-1 w-[95%] md:w-[50%] aspect-video rounded-lg border border-[#4e737a] shadow-2xl bg-black"
 						src="https://www.youtube.com/embed/DZZiAAm1rWs?si=G8SFAN_AP1Ic3qmr-&vq=hd1080&autoplay=1&mute=0"
 						title="YouTube video player"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
