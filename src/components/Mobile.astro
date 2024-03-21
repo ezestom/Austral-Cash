@@ -1,6 +1,6 @@
 ---
 import Container from "../components/Container.astro";
-import TextPresentation from "./TextPresentation.astro";
+import TextPresentation from "./HeroText.astro";
 ---
 
 <Container>
@@ -157,7 +157,8 @@ import TextPresentation from "./TextPresentation.astro";
 				class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
 			></span>
 			<span
-				class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[black] to-[#13151a] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl">
+				class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[black] to-[#13151a] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl"
+				id="btn-whatsapp">
 				<span class="relative font-semibold text-white"
 					>Cotizar mi pedido por WhatsApp</span
 				>
@@ -182,6 +183,12 @@ import TextPresentation from "./TextPresentation.astro";
 	#toggle_nav {
 		-webkit-box-reflect: below 0px
 			linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.08));
+	}
+	#btn-whatsapp:hover > span {
+		text-shadow:
+			0 0 5px #ffffff,
+			0 0 10px #ffffff,
+			0 0 20px #ffffff;
 	}
 	body {
 		overflow-x: hidden;

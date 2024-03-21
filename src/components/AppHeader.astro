@@ -3,13 +3,13 @@ import logo from "../img/white_logo_only.png";
 import Container from "./Container.astro";
 const links = [
 	{
+		to: "/#price",
+		label: "Cotizaciones",
+	},
+	{
 		to: "/#steps",
 		label: "Solo en 4 pasos",
 	},
-	// {
-	// 	to: "/#features",
-	// 	label: "Funcionalidades",
-	// },
 
 	{
 		to: "/#whyAsutralCash",
@@ -133,8 +133,8 @@ const links = [
 									<li>
 										<a
 											href={link.to}
-											class="hover:text-primary 
-                      dark:hover:text-secondary text-gray-900 lg:text-white dark:text-white block transition text-md font-semibold  md:px-4 tracking-tighter	">
+											class=" text-gray-900 lg:text-white dark:text-white block transition text-md font-semibold  md:px-4 tracking-tighter 	"
+											id="nav-link">
 											<span>{link.label}</span>
 										</a>
 									</li>
@@ -154,6 +154,14 @@ const links = [
 		.logo img {
 			margin: 0.25rem;
 		}
+		#nav-link:hover,
+		:focus {
+			color: #ffffff;
+			text-shadow:
+				0 0 5px #ffffff,
+				0 0 10px #ffffff,
+				0 0 20px #ffffff;
+		}
 		#navlinks,
 		.logo {
 			animation: enhance-header linear both;
@@ -171,7 +179,7 @@ const links = [
 					align-items: center;
 					justify-content: center;
 					overflow: hidden;
-					border-radius: 0.75rem; /* Equivalente a rounded-xl */
+					border-radius: 3rem;
 					border: 1px solid #4b5563; /* Equivalente a border-gray-800 */
 					background-image: linear-gradient(
 						to right,

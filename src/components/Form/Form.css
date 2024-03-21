@@ -14,9 +14,11 @@ dialog {
 	height: 100%;
 	z-index: 80;
 }
-
-
-
+#open-dialog:hover > span,
+#btn-submit:hover > span,
+#close-dialog:hover {
+	text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
 
 .fixedTitle {
 	animation: fixedTitle linear both;
