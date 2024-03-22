@@ -1,0 +1,80 @@
+<div
+	class="relative right-0 bottom-20 flex items-center justify-center w-full"
+	id="container_toggle_nav">
+	<a
+		id="toggle_nav"
+		target="_blank"
+		href="https://wa.me/+5491168641122"
+		class="z-100 fixed flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105 z-50"
+		href="/#contact">
+		<span
+			class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
+		></span>
+		<span
+			class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gradient-to-r from-[black] to-[#13151a] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl"
+			id="btn-whatsapp">
+			<span class="relative font-semibold text-white"
+				>Cotizar mi pedido por WhatsApp</span
+			>
+			<svg
+				class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+				aria-hidden="true"
+				fill="none"
+				viewBox="0 0 14 10">
+				<path
+					stroke="currentColor"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+			</svg>
+		</span>
+	</a>
+</div>
+
+<style>
+	#toggle_nav {
+		-webkit-box-reflect: below 0px
+			linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.08));
+	}
+	#btn-whatsapp:hover > span {
+		text-shadow:
+			0 0 5px #ffffff,
+			0 0 10px #ffffff,
+			0 0 20px #ffffff;
+	}
+	#container_toggle_nav {
+		animation: move linear both;
+		animation-timeline: scroll(root);
+		animation-range: 0 50px;
+	}
+	#toggle_nav {
+		animation: light linear both;
+		animation-timeline: scroll(root);
+		animation-range: 0 100px;
+	}
+	@media (width > 700px) {
+		@keyframes light {
+			0% {
+				opacity: 0;
+			}
+			50% {
+				opacity: 1;
+			}
+		}
+		@keyframes move {
+			to {
+				filter: drop-shadow(0 -1em 8rem white );
+				bottom: 1rem;
+				position: fixed;
+				z-index: 100;
+			}
+		}
+
+		@keyframes move {
+			to {
+				bottom: 3rem;
+			}
+		}
+	}
+</style>

@@ -82,12 +82,12 @@ export function Form() {
 			</div>
 			<span className="flex btn-form">
 				<a
-					className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
+					className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
 					href="#open-dialog"
 					onClick={openDialog}
 					id="open-dialog">
 					<span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-					<span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[black] to-[#13151a] px-8 py-1  font-medium text-gray-50 backdrop-blur-3xl">
+					<span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gradient-to-r from-[black] to-[#13151a] px-8 py-1  font-medium text-gray-50 backdrop-blur-3xl">
 						Ir al formulario
 						<svg
 							className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
