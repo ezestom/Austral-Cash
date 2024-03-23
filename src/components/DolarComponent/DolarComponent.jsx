@@ -30,15 +30,15 @@ function DolarComponent() {
 							className="relative flex w-full items-center justify-between rounded-xl border 0 bg-whitejustify-center overflow-hidden  border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 shadow-2xl hover:cursor-crosshair  p-6 hover:scale-105 transition hover:brightness-130"
 							key={item.casa}>
 							<div>
-								<p className="text-base text-gray-500 flex gap-1">
-									<li className="inline-flex rounded  text-green-600">
+								<p className="text-base text-gray-400 flex gap-1">
+									<li className="inline-flex rounded  text-green-500 animate-pulse ">
 										●
 									</li>
 									<li>{item.moneda}</li>
 									<li>{item.nombre}</li>
 								</p>
 
-								<p className="text-2xl font-normal text-gray-200 py-3">
+								<p className="text-2xl font-normal text-gray-100 py-3">
 									<li>Compra = ${item.compra}</li>
 									<li>Venta = ${item.venta}</li>
 								</p>

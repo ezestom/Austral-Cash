@@ -6,14 +6,18 @@ const links = [
 		to: "/#price",
 		label: "Cotizaciones",
 	},
-	{
-		to: "/#steps",
-		label: "Solo en 4 pasos",
-	},
 
 	{
 		to: "/#whyAsutralCash",
 		label: "¿Por qué Austral Cash?",
+	},
+	{
+		to: "/#steps",
+		label: "Solo en 4 pasos",
+	},
+	{
+		to: "/#inmersion",
+		label: "Inmersión",
 	},
 	{
 		to: "/#us",
@@ -172,17 +176,17 @@ const links = [
 				to {
 					height: 75px;
 					opacity: 1;
-					padding: 1rem;
+					padding: 0.5rem;
 					position: relative;
 					display: flex;
 					align-items: center;
 					justify-content: center;
 					overflow: hidden;
-					border-radius: .75rem;
+					border-radius: 0.75rem;
 					border: 1px solid #4b5563;
-					background-image: linear-gradient(to right, black, #13151a);
-					box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Equivalente a shadow-2xl */
 					z-index: 50;
+					background-color: rgba(0, 0, 0, 0.3);
+					backdrop-filter: blur(20px) saturate(180%);
 				}
 			}
 		}

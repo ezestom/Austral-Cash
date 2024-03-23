@@ -1,11 +1,11 @@
 <div
-	class="relative right-0 bottom-20 flex items-center justify-center w-full"
+	class="relative right-0 flex items-center justify-center w-full"
 	id="container_toggle_nav">
 	<a
 		id="toggle_nav"
 		target="_blank"
 		href="https://wa.me/+5491168641122"
-		class="z-100 fixed flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105 z-50"
+		class="z-100 fixed -bottom-10 flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105 z-50"
 		href="/#contact">
 		<span
 			class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
@@ -33,10 +33,10 @@
 </div>
 
 <style>
-	#toggle_nav {
+	/* #toggle_nav {
 		-webkit-box-reflect: below 0px
 			linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.08));
-	}
+	} */
 	#btn-whatsapp:hover > span {
 		text-shadow:
 			0 0 5px #ffffff,
@@ -64,8 +64,8 @@
 		}
 		@keyframes move {
 			to {
-				filter: drop-shadow(0 -1em 8rem white );
-				bottom: 1rem;
+				filter: drop-shadow(0 -1em 8rem white);
+				bottom: 0rem;
 				position: fixed;
 				z-index: 100;
 			}
@@ -73,7 +73,7 @@
 
 		@keyframes move {
 			to {
-				bottom: 3rem;
+				bottom: 4rem;
 			}
 		}
 	}
