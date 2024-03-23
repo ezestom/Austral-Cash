@@ -1,22 +1,18 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { BlurVideo } from "../BlurVideo/BlurVideo.jsx";
-import Container from "../Container.astro";
 ---
 
 <Layout title="Por qué Astral Cash?">
-	<Container>
-		<article
-			class="text-white mb-20 relative flex items-center justify-end border border-gray-600"
-			id="whyAsutralCash">
-			<!-- <div
-				class="-z-10 absolute h-full w-full bg-[radial-gradient(#303030_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]">
-			</div> -->
-			<div class="flex flex-col justify-center items-center px-10">
-				<h1 class="text-3xl text-center md:text-5xl py-5 font-black">
+	<section
+		id="whyAsutralCash"
+		class="text-white mb-20 relative border border-gray-600 flex items-center justify-center">
+		<article class="max-w-screen-2xl w-full flex justify-end items-center">
+			<div class="max-w-[75ch] text-balance">
+				<h1 class="text-3xl text-center md:text-5xl font-black pb-5">
 					¿Por qué Austral Cash?
 				</h1>
-				<p class="text-center text-base md:text-2xl max-w-[45ch] text-black md:text-white">
+				<p
+					class="text-center text-xl md:text-2xl font-semibold md:text-white">
 					En Austral Cash, nos esforzamos por ofrecer a nuestros
 					clientes la mejor experiencia de cambio de divisas. Nuestro
 					objetivo es proporcionar un servicio rápido, seguro y
@@ -27,14 +23,13 @@ import Container from "../Container.astro";
 				<!-- <BlurVideo client:visible /> -->
 			</div>
 		</article>
-	</Container>
+	</section>
 </Layout>
 
 <style>
-	article {
+	section {
 		background-image: url(../../img/austral_background.jpg);
 		background-size: cover;
-		border-radius: 0.75rem;
 		min-height: 85vh;
 	}
 	@media (width < 700px) {

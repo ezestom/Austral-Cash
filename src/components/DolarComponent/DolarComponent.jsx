@@ -28,7 +28,8 @@ function DolarComponent() {
 					{dolarData.map((item) => (
 						<article
 							className="relative flex w-full items-center justify-between rounded-xl border 0 bg-whitejustify-center overflow-hidden  border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 shadow-2xl hover:cursor-crosshair  p-6 hover:scale-105 transition hover:brightness-130"
-							key={item.casa}>
+							key={item.casa}
+							title={item.fechaActualización}>
 							<div>
 								<p className="text-base text-gray-400 flex gap-1">
 									<li className="inline-flex rounded  text-green-500 animate-pulse ">
@@ -42,7 +43,7 @@ function DolarComponent() {
 									<li>Compra = ${item.compra}</li>
 									<li>Venta = ${item.venta}</li>
 								</p>
-								<p className="text-xs text-gray-500 flex gap-1">
+								<p className="text-xs text-gray-300 gap-1 ">
 									Actualizado: {item.fechaActualizacion}
 								</p>
 							</div>
