@@ -1,12 +1,36 @@
 ---
-import bitcoin from "../icons/bitcoin.svg";
-import binance from "../icons/binance.svg";
-import coinbase from "../icons/coinbase.svg";
-import ethereum from "../icons/ethereum.svg";
+interface Client {
+	img1?: any;
+	img2?: any;
+	img3?: any;
+	img4?: any;
+	img5?: any;
+	img6?: any;
+	img7?: any;
+	img8?: any;
+	img9?: any;
+	img10?: any;
+	img11?: any;
+	img12?: any;
+}
+const {
+	img1,
+	img2,
+	img3,
+	img4,
+	img5,
+	img6,
+	img7,
+	img8,
+	img9,
+	img10,
+	img11,
+	img12,
+} = Astro.props;
 ---
 
 <div
-	class="flex flex-col gap-2 w-full absolute bottom-0 "
+	class="flex flex-col gap-2 w-full relative bottom-0"
 	id="example-output-section">
 	<div class="flex flex-row examples-container overflow-hidden mt-2">
 		<div class="flex flex-row examples-row gap-2">
@@ -14,11 +38,11 @@ import ethereum from "../icons/ethereum.svg";
 				<a
 					href=""
 					target="_blank"
-					class="group rounded-3xl opacity-10 hover:opacity-100 flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
+					class="group rounded-3xl hover:opacity-100 flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
 					<div
 						class="p-2 grayscale transition duration-200 hover:grayscale-0">
 						<img
-							src={binance.src}
+							src={img1}
 							class="h-12 w-auto mx-auto"
 							loading="lazy"
 							alt="client logo"
@@ -26,80 +50,81 @@ import ethereum from "../icons/ethereum.svg";
 							height=""
 						/>
 					</div>
-					<a
-						href="https://grupocoinbase.com/"
-						target="_blank"
-						class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
-						<div
-							class="p-2 grayscale transition duration-200 hover:grayscale-0">
-							<img
-								src={coinbase.src}
-								class="h-12 w-auto mx-auto"
-								loading="lazy"
-								alt="client logo"
-								width=""
-								height=""
-							/>
-						</div>
-					</a>
-					<a
-						href="https://www.bitcoinsa.com.ar/"
-						target="_blank"
-						class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
-						<div
-							class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-							<img
-								src={bitcoin.src}
-								class="h-12 w-auto m-auto"
-								loading="lazy"
-								alt="client logo"
-								width=""
-								height=""
-							/>
-						</div>
-					</a>
-					<a
-						href="https://grupocoinbase.com/ethereum/"
-						target="_blank"
-						class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
-						<div
-							class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-							<img
-								src={ethereum.src}
-								class="h-12 w-auto m-auto"
-								loading="lazy"
-								alt="client logo"
-								width=""
-								height=""
-							/>
-						</div>
-					</a>
-					<a
-						href=""
-						target="_blank"
-						class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
-						<div
-							class="p-2 grayscale transition duration-200 hover:grayscale-0">
-							<img
-								src={binance.src}
-								class="h-12 w-auto mx-auto"
-								loading="lazy"
-								alt="client logo"
-								width=""
-								height=""
-							/>
-						</div>
-					</a>
 				</a>
+				<a
+					href="https://grupocoinbase.com/"
+					target="_blank"
+					class="group rounded-3xl hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
+					<div
+						class="p-2 grayscale transition duration-200 hover:grayscale-0">
+						<img
+							src={img2}
+							class="h-12 w-auto mx-auto"
+							loading="lazy"
+							alt="client logo"
+							width=""
+							height=""
+						/>
+					</div>
+				</a>
+				<a
+					href="https://www.bitcoinsa.com.ar/"
+					target="_blank"
+					class="group rounded-3xl hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
+					<div
+						class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
+						<img
+							src={img3}
+							class="h-12 w-auto m-auto"
+							loading="lazy"
+							alt="client logo"
+							width=""
+							height=""
+						/>
+					</div>
+				</a>
+				<a
+					href="https://grupocoinbase.com/ethereum/"
+					target="_blank"
+					class="group rounded-3xl hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
+					<div
+						class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
+						<img
+							src={img4}
+							class="h-12 w-auto m-auto"
+							loading="lazy"
+							alt="client logo"
+							width=""
+							height=""
+						/>
+					</div>
+				</a>
+				<a
+					href=""
+					target="_blank"
+					class="group rounded-3xl hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
+					<div
+						class="p-2 grayscale transition duration-200 hover:grayscale-0">
+						<img
+							src={img5}
+							class="h-12 w-auto mx-auto"
+							loading="lazy"
+							alt="client logo"
+							width=""
+							height=""
+						/>
+					</div>
+				</a>
+
 				<div class="flex flex-row gap-2">
 					<a
 						href="https://grupocoinbase.com/"
 						target="_blank"
-						class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
+						class="group rounded-3xl hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
 						<div
 							class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
 							<img
-								src={coinbase.src}
+								src={img6}
 								class="h-12 w-auto m-auto"
 								loading="lazy"
 								alt="client logo"
@@ -111,11 +136,11 @@ import ethereum from "../icons/ethereum.svg";
 					<a
 						href="https://www.bitcoinsa.com.ar/"
 						target="_blank"
-						class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
+						class="group rounded-3xl hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
 						<div
 							class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
 							<img
-								src={bitcoin.src}
+								src={img7}
 								class="h-12 w-auto m-auto"
 								loading="lazy"
 								alt="client logo"
@@ -127,11 +152,11 @@ import ethereum from "../icons/ethereum.svg";
 					<a
 						href="https://grupocoinbase.com/ethereum/"
 						target="_blank"
-						class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
+						class="group rounded-3xl hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
 						<div
 							class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
 							<img
-								src={ethereum.src}
+								src={img8}
 								class="h-12 w-auto m-auto"
 								loading="lazy"
 								alt="client logo"
@@ -143,11 +168,11 @@ import ethereum from "../icons/ethereum.svg";
 					<a
 						href=""
 						target="_blank"
-						class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
+						class="group rounded-3xl hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
 						<div
 							class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
 							<img
-								src={binance.src}
+								src={img9}
 								class="h-12 w-auto m-auto"
 								loading="lazy"
 								alt="client logo"
@@ -160,11 +185,11 @@ import ethereum from "../icons/ethereum.svg";
 				<a
 					href="https://grupocoinbase.com/"
 					target="_blank"
-					class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
+					class="group rounded-3xl hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
 					<div
 						class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
 						<img
-							src={coinbase.src}
+							src={img10}
 							class="h-12 w-auto m-auto"
 							loading="lazy"
 							alt="client logo"
@@ -178,11 +203,11 @@ import ethereum from "../icons/ethereum.svg";
 			<a
 				href="https://www.bitcoinsa.com.ar/"
 				target="_blank"
-				class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
+				class="group rounded-3xl hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
 				<div
 					class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
 					<img
-						src={bitcoin.src}
+						src={img11}
 						class="h-12 w-auto m-auto"
 						loading="lazy"
 						alt="client logo"
@@ -194,27 +219,11 @@ import ethereum from "../icons/ethereum.svg";
 			<a
 				href="https://grupocoinbase.com/ethereum/"
 				target="_blank"
-				class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
+				class="group rounded-3xl hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
 				<div
 					class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
 					<img
-						src={ethereum.src}
-						class="h-12 w-auto m-auto"
-						loading="lazy"
-						alt="client logo"
-						width=""
-						height=""
-					/>
-				</div>
-			</a>
-			<a
-				href=""
-				target="_blank"
-				class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
-				<div
-					class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-					<img
-						src={binance.src}
+						src={img12}
 						class="h-12 w-auto m-auto"
 						loading="lazy"
 						alt="client logo"
@@ -224,139 +233,6 @@ import ethereum from "../icons/ethereum.svg";
 				</div>
 			</a>
 		</div>
-
-		<!-- <div class="flex flex-row examples-container overflow-hidden">
-    <div class="flex flex-row examples-row2 gap-2">
-      <div class="flex flex-row gap-2">
-        <div
-          class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center  px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105"
-        >
-          <div
-            class="p-2 flex grayscale transition duration-200 hover:grayscale-0"
-          >
-            <img
-              src="./images/clients/netflix.svg"
-              class="h-8 w-auto m-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-        <div
-          class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center  px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105"
-        >
-          <div
-            class="p-2 flex grayscale transition duration-200 hover:grayscale-0"
-          >
-            <img
-              src="./images/clients/netflix.svg"
-              class="h-8 w-auto m-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-        <div
-          class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center  px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105"
-        >
-          <div
-            class="p-2 flex grayscale transition duration-200 hover:grayscale-0"
-          >
-            <img
-              src="./images/clients/netflix.svg"
-              class="h-8 w-auto m-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-        <div
-          class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center  px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105"
-        >
-          <div class="p-2 grayscale transition duration-200 hover:grayscale-0">
-            <img
-              src="./images/clients/google-cloud.svg"
-              class="h-12 w-auto mx-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-row gap-2">
-        <div
-          class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center  px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105"
-        >
-          <div
-            class="p-2 flex grayscale transition duration-200 hover:grayscale-0"
-          >
-            <img
-              src="./images/clients/netflix.svg"
-              class="h-8 w-auto m-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-        <div
-          class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center  px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105"
-        >
-          <div
-            class="p-2 flex grayscale transition duration-200 hover:grayscale-0"
-          >
-            <img
-              src="./images/clients/netflix.svg"
-              class="h-8 w-auto m-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-        <div
-          class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center  px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105"
-        >
-          <div class="p-2 grayscale transition duration-200 hover:grayscale-0">
-            <img
-              src="./images/clients/google-cloud.svg"
-              class="h-12 w-auto mx-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-        <div
-          class="group rounded-3xl opacity-10 hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center  px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105"
-        >
-          <div
-            class="p-2 flex grayscale transition duration-200 hover:grayscale-0"
-          >
-            <img
-              src="./images/clients/netflix.svg"
-              class="h-8 w-auto m-auto"
-              loading="lazy"
-              alt="client logo"
-              width=""
-              height=""
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
 		<style>
 			.examples-row {

@@ -1,11 +1,11 @@
 <div
-	class="relative right-0 flex items-center justify-center w-full"
+	class="fixed right-0 flex items-center justify-center w-full"
 	id="container_toggle_nav">
 	<a
 		id="toggle_nav"
 		target="_blank"
 		href="https://wa.me/+5491168641122"
-		class="z-100 fixed -bottom-10 flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105 z-50"
+		class="z-100 fixed flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105 z-50"
 		href="/#contact">
 		<span
 			class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
@@ -43,37 +43,34 @@
 			0 0 10px #ffffff,
 			0 0 20px #ffffff;
 	}
+	#btn-whatsapp {
+		animation: radius linear both;
+		animation-timeline: scroll(root);
+		animation-range: 0 100px;
+	}
+
 	#container_toggle_nav {
 		animation: move linear both;
 		animation-timeline: scroll(root);
 		animation-range: 0 50px;
+		bottom: 3rem;
 	}
 	#toggle_nav {
-		animation: light linear both;
+		animation: radius linear both;
 		animation-timeline: scroll(root);
 		animation-range: 0 100px;
 	}
 	@media (width > 700px) {
-		@keyframes light {
-			0% {
-				opacity: 0;
-			}
-			50% {
-				opacity: 1;
+		@keyframes radius {
+			to {
+				border-radius: 0.75rem 0.75rem 0 0;
 			}
 		}
 		@keyframes move {
 			to {
-				filter: drop-shadow(0 -1em 8rem white);
-				bottom: 0rem;
-				position: fixed;
+				filter: drop-shadow(0 -2em 6rem white);
 				z-index: 100;
-			}
-		}
-
-		@keyframes move {
-			to {
-				bottom: 4rem;
+				bottom: 1.5rem;
 			}
 		}
 	}

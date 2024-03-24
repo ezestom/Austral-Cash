@@ -2,6 +2,13 @@
 import Container from "../Container.astro";
 import DolarComponent from "../DolarComponent/DolarComponent.jsx";
 import Fader from "../Fader.astro";
+import wise from "../../icons/banks/wise.webp";
+import uala from "../../icons/banks/uala.webp";
+import skrill from "../../icons/banks/skrill.webp";
+import perfect from "../../icons/banks/perfect.webp";
+import paypal from "../../icons/banks/paypal.webp";
+import payoneer from "../../icons/banks/payoneer.webp";
+import mercadopago from "../../icons/banks/mercadopago.webp";
 ---
 
 <Container>
@@ -17,6 +24,19 @@ import Fader from "../Fader.astro";
 			</p>
 		</div>
 		<DolarComponent client:load />
-		<Fader />
 	</article>
+	<Fader
+		img1={wise.src}
+		img2={uala.src}
+		img3={skrill.src}
+		img4={perfect.src}
+		img5={paypal.src}
+		img6={payoneer.src}
+		img7={mercadopago.src}
+		img8={wise.src}
+		img9={uala.src}
+		img10={skrill.src}
+		img11={perfect.src}
+		img12={paypal.src}
+	/>
 </Container>

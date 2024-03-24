@@ -7,6 +7,12 @@ import img1 from "../../icons/calculator.svg";
 import img2 from "../../icons/wallet.svg";
 import img3 from "../../icons/dollar.svg";
 import img4 from "../../icons/whatsapp.svg";
+import nexo from "../../icons/crypto/nexo.svg";
+import metamask from "../../icons/crypto/metamask.svg";
+import ethereum from "../../icons/crypto/ethereum.svg";
+import coinbase from "../../icons/crypto/coinbase.svg";
+import bitcoin from "../../icons/crypto/bitcoin.svg";
+import binance from "../../icons/crypto/binance.svg";
 ---
 
 <Layout title="Stepts to follow">
@@ -23,37 +29,51 @@ import img4 from "../../icons/whatsapp.svg";
 
 			<div class="grid grid-col-1 md:grid-cols-2 my-20 gap-10">
 				<CardSpotlight
-					header="Paso 1 - Elegí tu monto"
+					header="Paso 1 - Cotizas y haces tu pedido."
 					main="Te mostraremos la oferta que tenemos para vos. Elegí el monto y las cuotas antes de continuar. Cuando estés listo, hacé click en el botón 'Continuar'."
-					footer="Completá tu información y validá tu celular. "
+					footer="Completá tu información y validá tu celular."
 					img={img1.src}
 					client:visible
 				/>
 				<CardSpotlight
-					header="Paso 1 - Elegí tu monto"
+					header="Paso 2 - Recibes las instrucciones para hacer tu envío."
 					main="Te mostraremos la oferta que tenemos para vos. Elegí el monto y las cuotas antes de continuar. Cuando estés listo, hacé click en el botón 'Continuar'."
 					footer="Completá tu información y validá tu celular. "
 					img={img2.src}
 					client:visible
 				/>
 				<CardSpotlight
-					header="Paso 1 - Elegí tu monto"
+					header="Paso 3 -Te enviamos el saldo cotizado."
 					main="Te mostraremos la oferta que tenemos para vos. Elegí el monto y las cuotas antes de continuar. Cuando estés listo, hacé click en el botón 'Continuar'."
 					footer="Completá tu información y validá tu celular. "
 					img={img3.src}
 					client:visible
 				/>
 				<CardSpotlight
-					header="Paso 1 - Elegí tu monto"
+					header="Paso 4 - Recibes tu saldo en tu cuenta."
 					main="Te mostraremos la oferta que tenemos para vos. Elegí el monto y las cuotas antes de continuar. Cuando estés listo, hacé click en el botón 'Continuar'."
 					footer="Completá tu información y validá tu celular. "
 					img={img4.src}
 					client:visible
 				/>
 			</div>
-			<Fader />
+
+			<Fader
+				img1={nexo.src}
+				img2={metamask.src}
+				img3={ethereum.src}
+				img4={coinbase.src}
+				img5={bitcoin.src}
+				img6={binance.src}
+				img7={nexo.src}
+				img8={metamask.src}
+				img9={ethereum.src}
+				img10={coinbase.src}
+				img11={bitcoin.src}
+				img12={binance.src}
+			/>
 		</article>
+
+		<style></style>
 	</Container>
 </Layout>
-
-<style></style>
