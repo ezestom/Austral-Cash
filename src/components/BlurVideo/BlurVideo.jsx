@@ -10,16 +10,16 @@ export function BlurVideo() {
 	const openDialog = () => {
 		setIsOpen(true);
 		// stop scroll
-		document.body.style.overflow = "hidden";
+		document.body.style.overflowY = "hidden";
 	};
 	const closeDialog = () => {
 		setIsOpen(false);
-		// enable scroll
-		document.body.style.overflow = "auto";
+		// remove overflow hidden
+		document.body.style.overflowY = "auto";
 	};
 
 	return (
-		<article className="relative  ">
+		<article className="relative">
 			<button onClick={openDialog}>
 				<img
 					src={play.src}
@@ -27,7 +27,7 @@ export function BlurVideo() {
 					className="absolute m-auto top-0 bottom-0 right-0 left-0 bg-gradient-to-r from-[#13151a] to-[black] rounded-lg border border-[#4e737a]  z-20 p-2 hover:scale-105 transition  "
 				/>
 				<video
-					className="relative max-h-screen  w-full rounded-lg border border-[#4b5563] shadow-md z-10 max-w-[90%] md:max-w-[50%] aspect-video mx-auto revealing-image  "
+					className="relative max-h-screen  w-full rounded-lg border border-[#4b5563] shadow-md z-10 max-w-[90%] md:max-w-[65%] aspect-video mx-auto revealing-image  "
 					src={video1}
 					loop
 					muted

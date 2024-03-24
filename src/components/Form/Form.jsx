@@ -18,13 +18,14 @@ export function Form() {
 
 	const openDialog = () => {
 		setDialog(true);
-		document.body.style.overflow = "hidden";
+		document.body.style.overflowY = "hidden";
+
 		document.getElementById("header").style.display = "none";
 	};
 
 	const closeDialog = () => {
 		setDialog(false);
-		document.body.style.overflow = "auto";
+		document.body.style.overflowY = "auto";
 		document.getElementById("header").style.display = "flex";
 	};
 
@@ -148,7 +149,7 @@ export function Form() {
 								<a
 									className="flex justify-center my-2"
 									href="/#contact"
-										id="close-dialog"
+									id="close-dialog"
 									onClick={closeDialog}>
 									<img
 										className=" pt-5"
@@ -193,7 +194,8 @@ export function Form() {
 								</label>
 								<button
 									type="submit"
-									className="z-100 max-w-[250px] mx-auto my-10 relative flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105" id="btn-submit">
+									className="z-100 max-w-[250px] mx-auto my-10 relative flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
+									id="btn-submit">
 									<span class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"></span>
 									<span class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[black] to-[#13151a] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl">
 										<span class="relative font-semibold text-white">

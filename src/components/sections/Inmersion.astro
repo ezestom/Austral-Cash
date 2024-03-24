@@ -1,23 +1,30 @@
 ---
 import Container from "../Container.astro";
+import { BlurVideo } from "../BlurVideo/BlurVideo.jsx";
+import { Image } from "astro:assets";
+import logoBackground from "../../img/white_logo_only.png";
 ---
 
 <Container />
-<section id="inmersion">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<h2>INMERSION</h2>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-					malesuada, nunc nec vehicula fermentum, nunc sapien
-					ultricies sapien, nec ultricies nunc sapien nec sapien.
-					Nullam nec fermentum nunc. Nullam nec fermentum nunc. Nullam
-					nec fermentum nunc. Nullam nec fermentum nunc. Nullam nec
-					fermentum nunc.
-				</p>
-			</div>
+<section id="inmersion" class="text-white mb-20 relative border-gray-600">
+	<article class="flex items-center justify-center flex-col min-h-screen">
+		<div class="max-w-[75ch] text-balance pb-10">
+			<h1 class="text-3xl text-center md:text-5xl font-black pb-5">
+				Inmersión
+			</h1>
+			<p class="text-center text-lg px-5 max-w-[75ch] text-balance">
+				Sumergete en el mundo de Austral Cash y descubre todo lo que
+				tenemos para ti.
+			</p>
 		</div>
-	</div>
+		<BlurVideo client:visible />
+		<Image
+			class="absolute top-0 left-0 w-full h-full object-contain opacity-5"
+			src={logoBackground}
+			alt="Inmersion"
+		/>
+	</article>
 </section>
 <Container />
+
+<style></style>
