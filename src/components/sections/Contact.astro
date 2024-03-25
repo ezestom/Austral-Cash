@@ -3,30 +3,19 @@ import Layout from "../../layouts/Layout.astro";
 import { Form } from "../../components/Form/Form.jsx";
 ---
 
-<Layout title="Por qué Astral Cash?">
-	<article class="text-white mb-20 relative" id="contact">
-		<div
-			class="-z-10 absolute h-full w-full bg-[radial-gradient(white,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]">
-		</div>
-		<div
-			aria-hidden="true"
-			class="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
-			<div
-				class="blur-[106px] h-[20rem] bg-gradient-to-br from-black to-black">
-			</div>
-			<div
-				class="blur-[106px] h-32 bg-gradient-to-r from-[black] to-[black]">
-			</div>
-		</div>
-		<div class="flex flex-col justify-center items-center">
-			<h1 class="text-3xl md:text-5xl py-5 font-black">Contacto</h1>
-			<p class="text-center text-lg px-5 max-w-[50ch] text-balance">
-				¿Tienes alguna duda o sugerencia? No dudes en contactarnos,
-				estamos para ayudarte.
-			</p>
-			<aside class="py-20">
-				<Form client:visible />
-			</aside>
-		</div>
-	</article>
-</Layout>
+<article class="text-white mb-20 relative" id="contact">
+	<div
+		class="-z-10 absolute h-full w-full bg-[radial-gradient(white,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]">
+	</div>
+
+	<div class="flex flex-col justify-center items-center">
+		<h1 class="text-3xl md:text-5xl py-5 font-black">Contacto</h1>
+		<p class="text-center text-lg px-5 max-w-[50ch] text-balance">
+			¿Tienes alguna duda o sugerencia? No dudes en contactarnos, estamos
+			para ayudarte.
+		</p>
+		<aside class="m-20">
+			<Form client:visible />
+		</aside>
+	</div>
+</article>
