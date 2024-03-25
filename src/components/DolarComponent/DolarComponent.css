@@ -1,3 +1,10 @@
 li {
 	list-style: none;
 }
+#actualization-text {
+	opacity: 0%;
+	transition: opacity 0.5s;
+}
+#article-dolar:hover #actualization-text {
+	opacity: 100%;
+}

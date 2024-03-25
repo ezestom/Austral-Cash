@@ -67,7 +67,7 @@ export function Form() {
 	};
 
 	return (
-		<div className="relative form-container z-10 m-auto">
+		<div className="relative form-container z-10 m-auto h-auto">
 			<Toaster />
 
 			<div className="flex w-full items-center justify-center">

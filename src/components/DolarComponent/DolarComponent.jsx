@@ -20,6 +20,25 @@ function DolarComponent() {
 
 		fetchData();
 	}, []);
+	// Función para formatear la fecha de actualización
+	const formatDate = (date) => {
+		const formattedDate = new Date(date);
+		const day = formattedDate.getDate();
+		const month = formattedDate.getMonth() + 1;
+		const year = formattedDate.getFullYear();
+		const hours = formattedDate.getHours();
+		const minutes = formattedDate.getMinutes();
+		const seconds = formattedDate.getSeconds();
+
+		// Asegurarse de que el día, mes, hora, minuto y segundo tengan 2 dígitos
+		const formattedDay = String(day).padStart(2, "0");
+		const formattedMonth = String(month).padStart(2, "0");
+		const formattedHours = String(hours).padStart(2, "0");
+		const formattedMinutes = String(minutes).padStart(2, "0");
+		const formattedSeconds = String(seconds).padStart(2, "0");
+
+		return `${formattedDay}/${formattedMonth}/${year} ${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+	};
 
 	return (
 		<div className="my-20">
@@ -27,9 +46,10 @@ function DolarComponent() {
 				<aside className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
 					{dolarData.map((item) => (
 						<article
-							className="relative flex w-full items-center justify-between rounded-xl border 0 bg-whitejustify-center overflow-hidden  border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 shadow-2xl hover:cursor-crosshair  p-6 hover:scale-105 transition hover:brightness-130"
+							className="relative flex w-full items-center justify-between rounded-xl border 0 bg-whitejustify-center overflow-hidden  border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 shadow-2xl hover:cursor-crosshair  p-6 hover:scale-105 transition hover:border-gray-700 hover:brightness-130"
 							key={item.casa}
-							title={item.fechaActualización}>
+							title={item.fechaActualización}
+							id="article-dolar">
 							<div>
 								<p className="text-base text-gray-400 flex gap-1">
 									<li className="inline-flex rounded  text-green-500 animate-pulse ">
@@ -43,8 +63,11 @@ function DolarComponent() {
 									<li>Compra = ${item.compra}</li>
 									<li>Venta = ${item.venta}</li>
 								</p>
-								<p className="text-xs text-gray-300 gap-1 ">
-									Actualizado: {item.fechaActualizacion}
+								<p
+									className="text-xs text-gray-300 gap-1 "
+									id="actualization-text">
+									Última actualización:{" "}
+									{formatDate(item.fechaActualizacion)}
 								</p>
 							</div>
 						</article>
