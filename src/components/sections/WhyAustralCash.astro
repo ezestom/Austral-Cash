@@ -11,7 +11,7 @@ import Layout from "../../layouts/Layout.astro";
 				¿Por qué Austral Cash?
 			</h1>
 			<p
-				class="text-center text-xl md:text-2xl font-semibold md:text-white">
+				class="text-center text-base md:text-2xl font-normal md:font-semibold md:text-white">
 				En Austral Cash, nos esforzamos por ofrecer a nuestros clientes
 				la mejor experiencia de cambio de divisas. Nuestro objetivo es
 				proporcionar un servicio rápido, seguro y confiable, con las
@@ -30,6 +30,12 @@ import Layout from "../../layouts/Layout.astro";
 	@media (width < 700px) {
 		article {
 			min-height: 50vh;
+			padding-inline: 1rem;
+		}
+		section {
+			background-repeat: no-repeat;
+			background-size: contain;
+			border: none;
 		}
 	}
 </style>
