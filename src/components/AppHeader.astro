@@ -151,9 +151,13 @@ const links = [
 	</nav>
 
 	<style>
-		.logo {
+		/* .logo {
 			border-radius: 1.5rem;
+			transition: all 0.5s ease-in-out;
 		}
+		.logo:hover {
+			transform: rotateY(180deg);
+		} */
 		.logo img {
 			margin: 0.25rem;
 		}
@@ -172,6 +176,13 @@ const links = [
 			animation-range: 0 250px;
 		}
 		@media (width > 700px) {
+			.logo {
+				border-radius: 1.5rem;
+				transition: all 0.5s ease-in-out;
+			}
+			.logo:hover {
+				transform: rotateY(180deg);
+			}
 			@keyframes enhance-header {
 				to {
 					height: 75px;
