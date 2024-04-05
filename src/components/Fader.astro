@@ -13,20 +13,8 @@ interface Client {
 	img11?: any;
 	img12?: any;
 }
-const {
-	img1,
-	img2,
-	img3,
-	img4,
-	img5,
-	img6,
-	img7,
-	img8,
-	img9,
-	img10,
-	img11,
-	img12,
-} = Astro.props;
+const { img1, img2, img3, img4, img5, img6, img7, img8, img9, img10 } =
+	Astro.props;
 ---
 
 <div
@@ -199,39 +187,6 @@ const {
 					</div>
 				</a>
 			</div>
-
-			<a
-				href="https://www.bitcoinsa.com.ar/"
-				target="_blank"
-				class="group rounded-3xl hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
-				<div
-					class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-					<img
-						src={img11}
-						class="h-12 w-auto m-auto"
-						loading="lazy"
-						alt="client logo"
-						width=""
-						height=""
-					/>
-				</div>
-			</a>
-			<a
-				href="https://grupocoinbase.com/ethereum/"
-				target="_blank"
-				class="group rounded-3xl hover:opacity-100 min-w-[256px] w-[256px] flex items-center justify-center px-4 cursor-pointer hover:border-muted-foreground transition-all hover:scale-105">
-				<div
-					class="p-2 flex grayscale transition duration-200 hover:grayscale-0">
-					<img
-						src={img12}
-						class="h-12 w-auto m-auto"
-						loading="lazy"
-						alt="client logo"
-						width=""
-						height=""
-					/>
-				</div>
-			</a>
 		</div>
 
 		<style>

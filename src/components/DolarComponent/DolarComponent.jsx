@@ -11,6 +11,7 @@ function DolarComponent() {
 				if (!response.ok) {
 					throw new Error("Hubo un problema al obtener los datos.");
 				}
+
 				const data = await response.json();
 				setDolarData(data);
 			} catch (error) {
@@ -41,128 +42,61 @@ function DolarComponent() {
 	};
 
 	return (
-		<div className="my-20">
+		<div className="my-20 ">
 			{dolarData ? (
-				<aside className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-					{dolarData.map((item) => (
-						<article
-							className="relative flex w-full items-center justify-between rounded-xl border 0 bg-whitejustify-center overflow-hidden  border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 shadow-2xl hover:cursor-crosshair  p-6 hover:scale-105 transition hover:border-gray-700 hover:brightness-130"
-							key={item.casa}
-							title={item.fechaActualización}
-							id="article-dolar">
-							<div>
-								<p className="text-base text-gray-400 flex gap-1">
-									<li className="inline-flex rounded  text-green-500 animate-pulse ">
-										●
-									</li>
-									<li>{item.moneda}</li>
-									<li>{item.nombre}</li>
-								</p>
+				<aside className="w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 shadow-2xl  rounded-xl py-10">
+					{dolarData
+						.filter((item) =>
+							["Oficial", "Blue", "Bolsa", "Cripto"].includes(
+								item.nombre
+							)
+						)
+						.map((item) => (
+							<article
+								className="relative  w-full items-center justify-between rounded-xl  px-8 hover:cursor-crosshair  p-1 transition hover:brightness-130"
+								key={item.casa}
+								title={item.fechaActualización}
+								id="article-dolar">
+								<div className="bg-white p-10 rounded-[3rem]">
+									<div className="flex flex-col items-center ">
+										<p className="text-base text-black font-semibold flex gap-1 border-b">
+											<li className="inline-flex rounded  text-green-500 animate-pulse ">
+												●
+											</li>
+											<li>{item.moneda}</li>
+											<li>{item.nombre}</li>
+										</p>
 
-								<p className="text-2xl font-normal text-gray-100 py-3">
-									<li>Compra = ${item.compra}</li>
-									<li>Venta = ${item.venta}</li>
-								</p>
-								<p
-									className="text-xs text-gray-300 gap-1 "
-									id="actualization-text">
-									Última actualización:{" "}
-									{formatDate(item.fechaActualizacion)}
-								</p>
-							</div>
-						</article>
-					))}
+										<p className="text-base text-center font-normal text-black py-3">
+											<li>Compra = ${item.compra}</li>
+											<li>Venta = ${item.venta}</li>
+										</p>
+									</div>
+								</div>
+							</article>
+						))}
 				</aside>
 			) : (
 				// si no hay datos, mostramos un skeleton por cada item que no ha cargado
 				<aside className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-					<article className="relative flex w-full items-center justify-between rounded-xl border 0 bg-whitejustify-center overflow-hidden  border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 shadow-2xl hover:cursor-crosshair  p-6 hover:scale-105 transition hover:brightness-130">
-						<div role="status" class="max-w-sm animate-pulse">
-							<div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-							<span class="sr-only">Loading...</span>
-						</div>
-					</article>
-
-					<article className="relative flex w-full items-center justify-between rounded-xl border 0 bg-whitejustify-center overflow-hidden  border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 shadow-2xl hover:cursor-crosshair  p-6 hover:scale-105 transition hover:brightness-130">
-						<div role="status" class="max-w-sm animate-pulse">
-							<div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-							<span class="sr-only">Loading...</span>
-						</div>
-					</article>
-
-					<article className="relative flex w-full items-center justify-between rounded-xl border 0 bg-whitejustify-center overflow-hidden  border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 shadow-2xl hover:cursor-crosshair  p-6 hover:scale-105 transition hover:brightness-130">
-						<div role="status" class="max-w-sm animate-pulse">
-							<div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-							<span class="sr-only">Loading...</span>
-						</div>
-					</article>
-
-					<article className="relative flex w-full items-center justify-between rounded-xl border 0 bg-whitejustify-center overflow-hidden  border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 shadow-2xl hover:cursor-crosshair  p-6 hover:scale-105 transition hover:brightness-130">
-						<div role="status" class="max-w-sm animate-pulse">
-							<div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-							<span class="sr-only">Loading...</span>
-						</div>
-					</article>
-
-					<article className="relative flex w-full items-center justify-between rounded-xl border 0 bg-whitejustify-center overflow-hidden  border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 shadow-2xl hover:cursor-crosshair  p-6 hover:scale-105 transition hover:brightness-130">
-						<div role="status" class="max-w-sm animate-pulse">
-							<div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-							<span class="sr-only">Loading...</span>
-						</div>
-					</article>
-
-					<article className="relative flex w-full items-center justify-between rounded-xl border 0 bg-whitejustify-center overflow-hidden  border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 shadow-2xl hover:cursor-crosshair  p-6 hover:scale-105 transition hover:brightness-130">
-						<div role="status" class="max-w-sm animate-pulse">
-							<div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-							<span class="sr-only">Loading...</span>
-						</div>
-					</article>
-
-					<article className="relative flex w-full items-center justify-between rounded-xl border 0 bg-whitejustify-center overflow-hidden  border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 shadow-2xl hover:cursor-crosshair  p-6 hover:scale-105 transition hover:brightness-130">
-						<div role="status" class="max-w-sm animate-pulse">
-							<div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-							<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-							<span class="sr-only">Loading...</span>
-						</div>
-					</article>
+					{[1, 2, 3, 4].map((_, index) => (
+						<article
+							className="relative flex w-full items-center justify-between rounded-xl  px-8 hover:cursor-crosshair  p-1 transition hover:brightness-130"
+							key={index}>
+							<div role="status" class="max-w-sm animate-pulse">
+								<div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
+								<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
+								<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
+								<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
+								<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
+								<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
+								<span class="sr-only">Loading...</span>
+							</div>
+						</article>
+					))}
 				</aside>
 			)}
 		</div>
 	);
 }
-
 export default DolarComponent;

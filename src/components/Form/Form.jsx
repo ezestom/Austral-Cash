@@ -110,7 +110,7 @@ export function Form() {
 				<dialog
 					open
 					className="backdrop-blur bg-transparent h-full flex items-center justify-center">
-					<div className=" flex h-full w-full items-center justify-center overflow-hidden rounded-lg border border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 shadow-2xl max-w-[400px] max-h-[550px]">
+					<div className=" flex  w-full items-center justify-center overflow-hidden rounded-lg border border-gray-800 bg-[--bg] px-8 shadow-2xl max-w-[450px] h-auto ">
 						{isLoading && (
 							<div className="absolute top-0 left-0 right-0 bottom-0 backdrop-blur  opacity-50 flex justify-center items-center z-50">
 								<span class="loader"></span>
@@ -159,7 +159,13 @@ export function Form() {
 								</a>
 							</legend>
 
-							<div className="flex flex-col gap-2 min-w-[350px] ">
+							<div className="flex flex-col gap-2 min-w-[350px] text-slate-200">
+								<legend>
+									¡Gracias por tu interés en Australcash! Por
+									favor, completa el siguiente formulario y
+									nos pondremos en contacto contigo lo antes
+									posible!
+								</legend>
 								<label htmlFor="name">
 									Nombre
 									<input

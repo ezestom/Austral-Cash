@@ -5,10 +5,12 @@ import WhatsappButton from "./WhatsappButton.astro";
 ---
 
 <Container>
-	<article class="flex items-center w-full h-full min-h-screen relative">
-		<div
-			class="-z-10 absolute h-full w-full bg-[radial-gradient(#303030_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]">
-		</div>
+	<article
+		class="flex items-center w-full h-full min-h-screen"
+		id="hero-section">
+		<!-- <div
+			class="-z-10 absolute h-full w-full bg-[radial-gradient(#fafafa_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]">
+		</div> -->
 
 		<TextPresentation />
 		<div class="phone">
@@ -68,7 +70,7 @@ import WhatsappButton from "./WhatsappButton.astro";
 					<div class="current-plan">
 						<div class="plan">
 							<div>
-								<div class="plan-header">Austral Cash</div>
+								<div class="plan-header">Australcash</div>
 								<div class="plan-price">
 									<span>$</span>109.95
 								</div>
@@ -95,7 +97,7 @@ import WhatsappButton from "./WhatsappButton.astro";
 							</div>
 						</div>
 						<div class="plan-text">
-							<strong>Cotización gratis</strong>
+							<strong>Transferencia realizada</strong>
 						</div>
 						<a class="change-plan" href="#"
 							>Consultanos por WhatsApp</a
@@ -150,6 +152,25 @@ import WhatsappButton from "./WhatsappButton.astro";
 </Container>
 
 <style>
+	#hero-section {
+		position: relative;
+	}
+
+	#hero-section::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url("../img/white_logo_only.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		opacity: 0.1; /* Opacidad de la imagen de fondo */
+		z-index: -1;
+	}
+
 	body {
 		overflow-x: hidden;
 	}
@@ -160,12 +181,13 @@ import WhatsappButton from "./WhatsappButton.astro";
 		top: 50%;
 		transform: rotate(-20deg) skewX(30deg) skewY(-10deg) scaleY(0.8)
 			scaleX(0.8);
+		z-index: -1;
 	}
 	@media (width > 1600px) {
-		.phone {
+		/* .phone {
 			transform: rotate(-20deg) skewX(30deg) skewY(-10deg) scaleY(1)
 				scaleX(1);
-		}
+		} */
 	}
 	@media (width < 1350px) {
 		.phone {
@@ -717,7 +739,7 @@ import WhatsappButton from "./WhatsappButton.astro";
 		height: 60%;
 		width: 100%;
 		top: -10%;
-		background-image: linear-gradient(45deg, #514fff, #ecf0ff);
+		background-image: linear-gradient(45deg, black, #202020);
 		transform: skewY(-15deg);
 	}
 	.notifications-bar .time {
@@ -814,7 +836,7 @@ import WhatsappButton from "./WhatsappButton.astro";
 		content: "";
 		display: block;
 		position: absolute;
-		background-color: #508af4;
+		background-color:;
 		width: 3px;
 		height: 4px;
 		border-right: 1px solid #fff;
@@ -969,9 +991,9 @@ import WhatsappButton from "./WhatsappButton.astro";
 		color: #fff;
 		font-weight: 400;
 		font-size: 14px;
-		background-image: linear-gradient(to right, #1a7eff, #44b9ff);
+		background-image: linear-gradient(to right, var(--bg), var(--bg));
 		padding: 10px 0;
-		border-radius: 5px;
+		border-radius: 1rem;
 		margin-bottom: 20px;
 	}
 	.plan-list {
@@ -1165,5 +1187,23 @@ import WhatsappButton from "./WhatsappButton.astro";
 		background-color: rgba(0, 0, 0, 0.15);
 		bottom: 12px;
 		border-radius: 4px;
+	}
+
+	article {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		border-bottom-left-radius: 10% 5%;
+		border-bottom-right-radius: 10% 5%;
+		animation: fadeOut linear both;
+		animation-timeline: view();
+		animation-range: 55% 85%;
+	}
+	@media (width >= 768px) {
+		@keyframes fadeOut {
+			to {
+				opacity: 0;
+			}
+		}
 	}
 </style>

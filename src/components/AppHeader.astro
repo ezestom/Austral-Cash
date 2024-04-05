@@ -4,21 +4,21 @@ import Container from "./Container.astro";
 const links = [
 	{
 		to: "/#price",
-		label: "Cotizaciones",
+		label: "Cambiar",
 	},
 
 	{
 		to: "/#whyAsutralCash",
-		label: "¿Por qué Austral Cash?",
+		label: "Nosotros",
 	},
-	{
-		to: "/#steps",
-		label: "Solo en 4 pasos",
-	},
-	{
-		to: "/#inmersion",
-		label: "Inmersión",
-	},
+	// {
+	// 	to: "/#steps",
+	// 	label: "Contacto",
+	// },
+	// {
+	// 	to: "/#inmersion",
+	// 	label: "Inmersión",
+	// },
 	{
 		to: "/#contact",
 		label: "Contacto",
@@ -88,18 +88,11 @@ const links = [
 						class="flex items-center space-x-2">
 						<!-- logo with css -->
 
-						<!-- <div aria-hidden="true" class="flex space-x-1">
-                            <div class="h-4 w-4 rounded-full bg-gray-900 dark:bg-white"></div>
-                            <div class="h-6 w-2 bg-primary"></div>
-                        </div> -->
 						<img
 							src={logo.src}
 							alt="Logo Austral Cash"
 							class="max-w-[50px]"
 						/>
-						<!-- <span class="text-2xl py-2 font-bold text-white dark:text-white"
-              >Cacta</span
-            > -->
 					</a>
 
 					<div class="relative flex max-h-10 items-center lg:hidden">
@@ -123,7 +116,7 @@ const links = [
 				<div
 					id="navLayer"
 					aria-hidden="true"
-					class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-[#13151a] backdrop-blur-2xl transition duration-500 lg:hidden">
+					class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-[--bg] backdrop-blur-2xl transition duration-500 lg:hidden">
 				</div>
 				<div
 					id="navlinks"
@@ -151,13 +144,6 @@ const links = [
 	</nav>
 
 	<style>
-		/* .logo {
-			border-radius: 1.5rem;
-			transition: all 0.5s ease-in-out;
-		}
-		.logo:hover {
-			transform: rotateY(180deg);
-		} */
 		.logo img {
 			margin: 0.25rem;
 		}
@@ -169,11 +155,10 @@ const links = [
 				0 0 10px #ffffff,
 				0 0 20px #ffffff;
 		}
-		#navlinks,
-		.logo {
+		nav {
 			animation: enhance-header linear both;
 			animation-timeline: scroll(root);
-			animation-range: 0 250px;
+			animation-range: 0 500px;
 		}
 		@media (width > 700px) {
 			.logo {
@@ -185,19 +170,13 @@ const links = [
 			}
 			@keyframes enhance-header {
 				to {
-					height: 75px;
-					opacity: 1;
-					padding: 0.5rem;
-					position: relative;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					overflow: hidden;
-					border-radius: 0.75rem;
-					border: 1px solid #4b5563;
+					margin-inline: auto;
+					left: 0;
+					right: 0;
 					z-index: 50;
-					background-color: rgba(0, 0, 0, 0.3);
+					background-color: hsla(0, 0%, 0%, 0.3);
 					backdrop-filter: blur(20px) saturate(180%);
+					filter: drop-shadow(0 2em 7em white);
 				}
 			}
 		}

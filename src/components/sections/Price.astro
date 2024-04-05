@@ -5,10 +5,13 @@ import Fader from "../Fader.astro";
 import wise from "../../icons/banks/wise.webp";
 import uala from "../../icons/banks/uala.webp";
 import skrill from "../../icons/banks/skrill.webp";
-import perfect from "../../icons/banks/perfect.webp";
 import paypal from "../../icons/banks/paypal.webp";
 import payoneer from "../../icons/banks/payoneer.webp";
 import mercadopago from "../../icons/banks/mercadopago.webp";
+import CardSpotlight from "../CardSpotlight.jsx";
+import img1 from "../../icons/calculator.svg";
+import img2 from "../../icons/whatsapp.svg";
+import img3 from "../../icons/wallet.svg";
 ---
 
 <Container>
@@ -16,27 +19,57 @@ import mercadopago from "../../icons/banks/mercadopago.webp";
 		class="min-h-screen flex flex-col justify-center text-white mb-20 relative"
 		id="price">
 		<div class="flex flex-col justify-center items-center">
-			<h1 class="text-3xl md:text-5xl py-5 font-black">
-				Cotización Dollar hoy
+			<h1 class="text-3xl md:text-6xl py-5 font-black">
+				Servicio en 3 pasos
 			</h1>
 			<p class="text-center text-lg px-5 max-w-[75ch] text-balance">
-				Actualización en tiempo real.
+				Sigue estos 3 pasos para hacer la transacción de manera segura y
+				rápida.
 			</p>
 		</div>
 		<DolarComponent client:load />
+		<div class="grid grid-col-1 md:grid-cols-3 my-20 gap-5">
+			<CardSpotlight
+				header="1 -  Cotizas y haces tu pedido."
+				main="Te mostraremos la oferta que tenemos para vos. Elegí el monto y las cuotas antes de continuar. Cuando estés listo, hacé click en el botón 'Continuar'."
+				footer="Completá tu información y validá tu celular."
+				img={img1.src}
+				client:visible
+			/>
+			<CardSpotlight
+				header="1 -  Cotizas y haces tu pedido."
+				main="Te mostraremos la oferta que tenemos para vos. Elegí el monto y las cuotas antes de continuar. Cuando estés listo, hacé click en el botón 'Continuar'."
+				footer="Completá tu información y validá tu celular."
+				img={img2.src}
+				client:visible
+			/>
+			<CardSpotlight
+				header="1 -  Cotizas y haces tu pedido."
+				main="Te mostraremos la oferta que tenemos para vos. Elegí el monto y las cuotas antes de continuar. Cuando estés listo, hacé click en el botón 'Continuar'."
+				footer="Completá tu información y validá tu celular."
+				img={img3.src}
+				client:visible
+			/>
+		</div>
 	</article>
 	<Fader
 		img1={wise.src}
 		img2={uala.src}
 		img3={skrill.src}
-		img4={perfect.src}
-		img5={paypal.src}
-		img6={payoneer.src}
-		img7={mercadopago.src}
-		img8={wise.src}
-		img9={uala.src}
-		img10={skrill.src}
-		img11={perfect.src}
-		img12={paypal.src}
+		img4={paypal.src}
+		img5={payoneer.src}
+		img6={mercadopago.src}
+		img7={wise.src}
+		img8={uala.src}
+		img9={skrill.src}
+		img10={paypal.src}
 	/>
 </Container>
+
+<style>
+	article {
+		background: black;
+		padding: 3rem;
+		border-radius: 3rem;
+	}
+</style>

@@ -1,5 +1,5 @@
 "use client";
-import  { useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const CardSpotlight = ({ header, main, footer, img }) => {
 	const divRef = useRef(null);
@@ -42,26 +42,26 @@ const CardSpotlight = ({ header, main, footer, img }) => {
 			onBlur={handleBlur}
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
-			className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-xl border border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 shadow-2xl hover:cursor-crosshair">
+			className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-[3rem] bg-white p-10 hover:cursor-crosshair">
 			<div
 				className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
 				style={{
 					opacity,
-					background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,182,255,.1), transparent 40%)`,
+					background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(0,0,0,.1), transparent 40%)`,
 				}}
 			/>
-			<article className=" h-full w-full flex flex-col justify-between py-16 gap-5">
-				<header className="text-3xl font-bold text-white">
+			<article className=" h-full w-full flex flex-col justify-between py-12">
+				<header className="text-3xl font-black text-black">
 					{header}
 				</header>
-				<main className="text-base text-gray-200">{main}</main>
-				<footer className="text-sm text-gray-200"> {footer}</footer>
+				<main className="text-base text-black">{main}</main>
+				<footer className="text-sm text-black"> {footer}</footer>
 			</article>
 			<img
 				src={img}
 				alt={`image of ${img}`}
 				className="w-auto max-h-[300px]
-				absolute bottom-0 right-0 transform  opacity-20 pointer-events-none rotate-[25deg] "
+				absolute bottom-0 right-0 transform  opacity-5 pointer-events-none rotate-[25deg] "
 			/>
 		</div>
 	);
