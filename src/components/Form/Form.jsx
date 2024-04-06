@@ -110,7 +110,7 @@ export function Form() {
 				<dialog
 					open
 					className="backdrop-blur bg-transparent h-full flex items-center justify-center">
-					<div className=" flex  w-full items-center justify-center overflow-hidden rounded-lg border border-gray-800 bg-[#202020] px-8 shadow-2xl max-w-[450px] h-auto ">
+					<div className=" flex  w-full items-center justify-center overflow-hidden rounded-lg border border-gray-800 bg-[#202020] shadow-2xl max-w-[400px] h-auto ">
 						{isLoading && (
 							<div className="absolute top-0 left-0 right-0 bottom-0 backdrop-blur  opacity-50 flex justify-center items-center z-50">
 								<span class="loader"></span>
@@ -119,7 +119,8 @@ export function Form() {
 						<form
 							onSubmit={handleSubmit}
 							method="POST"
-							action="https://formsubmit.co/ezequielstom@gmail.com">
+							action="https://formsubmit.co/ezequielstom@gmail.com"
+							className="px-4">
 							{/* <input
 								type="hidden"
 								name="_cc"
@@ -160,23 +161,21 @@ export function Form() {
 							</legend>
 
 							<div className="flex flex-col gap-2 min-w-[350px] text-slate-200">
-							
 								<label htmlFor="name">
-									Nombre
+									Nombre y Apellido
 									<input
 										type="text"
 										name="name"
 										id="name"
 										placeholder="John Doe"
 										required
-										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[#303030]	bg-origin-border px-3 py-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-200 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none"
+										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[#303030]	bg-origin-border p-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-200 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none"
 									/>
 								</label>
-
 								<label htmlFor="email">
-									Correo
+									Correo Electrónico
 									<input
-										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[#303030]	bg-origin-border px-3 py-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-200 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none"
+										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[#303030]	bg-origin-border p-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-200 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none"
 										type="email"
 										name="email"
 										id="email"
@@ -184,15 +183,42 @@ export function Form() {
 										required
 									/>
 								</label>
+								<label htmlFor="phone">
+									Teléfono
+									<input
+										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[#303030]	bg-origin-border p-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-200 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none"
+										type="tel"
+										name="phone"
+										id="phone"
+										placeholder="+54 9 11 1234 5678"
+										required
+									/>
+								</label>
+								<label htmlFor="case">
+									Asunto
+									<input
+										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[#303030]	bg-origin-border p-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-200 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none"
+										type="text"
+										name="case"
+										id="case"
+										placeholder="Consulta sobre servicios de Austral Cash"
+										required
+									/>
+								</label>
 								<label htmlFor="message">
 									Mensaje
 									<textarea
-										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[#303030]	bg-origin-border px-3 py-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-200 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none min-h-[200px]"
+										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[#303030]	bg-origin-border p-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-200 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none min-h-[200px]"
 										name="message"
 										id="message"
 										placeholder="Quiero recibir información sobre los servicios de Austral Cash."
 										required></textarea>
 								</label>
+								<p>
+									{" "}
+									¡Esperamos poder ayudarte con nuestras
+									soluciones financieras!
+								</p>
 								<button
 									type="submit"
 									className="z-100 max-w-[250px] mx-auto my-10 relative flex h-12 overflow-hidden rounded-xl p-[2px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
