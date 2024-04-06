@@ -18,6 +18,7 @@ import img3 from "../../icons/wallet.svg";
 	<article
 		class="min-h-screen flex flex-col justify-center text-white mb-20 relative"
 		id="price">
+		<DolarComponent client:load />
 		<div class="flex flex-col justify-center items-center">
 			<h1 class="text-3xl md:text-6xl py-5 font-black">
 				Servicio en 3 pasos
@@ -27,7 +28,6 @@ import img3 from "../../icons/wallet.svg";
 				rápida.
 			</p>
 		</div>
-		<DolarComponent client:load />
 		<div class="grid grid-col-1 md:grid-cols-3 my-20 gap-5">
 			<CardSpotlight
 				header="1 -  Cotizas y haces tu pedido."
@@ -69,7 +69,22 @@ import img3 from "../../icons/wallet.svg";
 <style>
 	article {
 		background: black;
-		padding: 3rem;
+		padding: 0 3rem;
 		border-radius: 3rem;
+		scale: 0.8;
+		transform: translateY(300px);
+		opacity: 0.75;
+		animation: fade linear both;
+		animation-timeline: scroll(root);
+		animation-range: 0 500px;
+	}
+	@media (width > 768px) {
+		@keyframes fade {
+			to {
+				scale: 1;
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
 	}
 </style>

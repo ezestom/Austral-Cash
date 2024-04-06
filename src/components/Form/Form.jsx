@@ -88,7 +88,7 @@ export function Form() {
 					onClick={openDialog}
 					id="open-dialog">
 					<span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-					<span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gradient-to-r from-[black] to-[#13151a] px-8 py-1  font-medium text-gray-50 backdrop-blur-3xl">
+					<span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl b bg-gradient-to-r from-[--bg] to-[--bg3] px-8 py-1  font-medium text-gray-50 backdrop-blur-3xl">
 						Ir al formulario
 						<svg
 							className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
@@ -110,7 +110,7 @@ export function Form() {
 				<dialog
 					open
 					className="backdrop-blur bg-transparent h-full flex items-center justify-center">
-					<div className=" flex  w-full items-center justify-center overflow-hidden rounded-lg border border-gray-800 bg-[--bg] px-8 shadow-2xl max-w-[450px] h-auto ">
+					<div className=" flex  w-full items-center justify-center overflow-hidden rounded-lg border border-gray-800 bg-[#202020] px-8 shadow-2xl max-w-[450px] h-auto ">
 						{isLoading && (
 							<div className="absolute top-0 left-0 right-0 bottom-0 backdrop-blur  opacity-50 flex justify-center items-center z-50">
 								<span class="loader"></span>
@@ -160,12 +160,7 @@ export function Form() {
 							</legend>
 
 							<div className="flex flex-col gap-2 min-w-[350px] text-slate-200">
-								<legend>
-									¡Gracias por tu interés en Australcash! Por
-									favor, completa el siguiente formulario y
-									nos pondremos en contacto contigo lo antes
-									posible!
-								</legend>
+							
 								<label htmlFor="name">
 									Nombre
 									<input
@@ -174,14 +169,14 @@ export function Form() {
 										id="name"
 										placeholder="John Doe"
 										required
-										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[linear-gradient(#000,#000),linear-gradient(to_right,#334454,#334454)]	bg-origin-border px-3 py-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-500 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none"
+										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[#303030]	bg-origin-border px-3 py-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-200 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none"
 									/>
 								</label>
 
 								<label htmlFor="email">
 									Correo
 									<input
-										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[linear-gradient(#000,#000),linear-gradient(to_right,#334454,#334454)]	bg-origin-border px-3 py-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-500 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none"
+										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[#303030]	bg-origin-border px-3 py-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-200 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none"
 										type="email"
 										name="email"
 										id="email"
@@ -192,7 +187,7 @@ export function Form() {
 								<label htmlFor="message">
 									Mensaje
 									<textarea
-										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[linear-gradient(#000,#000),linear-gradient(to_right,#334454,#334454)]	bg-origin-border px-3 py-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-500 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none min-h-[200px]"
+										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[#303030]	bg-origin-border px-3 py-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-200 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none min-h-[200px]"
 										name="message"
 										id="message"
 										placeholder="Quiero recibir información sobre los servicios de Austral Cash."
@@ -200,10 +195,10 @@ export function Form() {
 								</label>
 								<button
 									type="submit"
-									className="z-100 max-w-[250px] mx-auto my-10 relative flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
+									className="z-100 max-w-[250px] mx-auto my-10 relative flex h-12 overflow-hidden rounded-xl p-[2px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
 									id="btn-submit">
 									<span class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"></span>
-									<span class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[black] to-[#13151a] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl">
+									<span class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl bg-gradient-to-r from-[black] to-[#13151a] px-8 py-1 font-medium text-gray-50 backdrop-blur-3xl">
 										<span class="relative font-semibold text-white">
 											Enviar mi consulta
 										</span>

@@ -1,17 +1,39 @@
 ---
 import { Form } from "../../components/Form/Form.jsx";
+import Fader from "../../components/Fader.astro";
+import nexo from "../../icons/crypto/nexo.svg";
+import metamask from "../../icons/crypto/metamask.svg";
+import ethereum from "../../icons/crypto/ethereum.svg";
+import coinbase from "../../icons/crypto/coinbase.svg";
+import bitcoin from "../../icons/crypto/bitcoin.svg";
+import binance from "../../icons/crypto/binance.svg";
 ---
 
 <article class="text-white mb-20 relative" id="contact">
 	<div
 		class="-z-10 absolute h-full w-full bg-[radial-gradient(white,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]">
 	</div>
+	<Fader
+		img1={nexo.src}
+		img2={metamask.src}
+		img3={ethereum.src}
+		img4={coinbase.src}
+		img5={bitcoin.src}
+		img6={binance.src}
+		img7={nexo.src}
+		img8={metamask.src}
+		img9={ethereum.src}
+		img10={coinbase.src}
+		img11={bitcoin.src}
+		img12={binance.src}
+	/>
 
-	<div class="flex flex-col justify-center items-center">
-		<h1 class="text-3xl md:text-5xl py-5 font-black">Contacto</h1>
-		<p class="text-center text-lg px-5 max-w-[50ch] text-balance">
-			¿Tienes alguna duda o sugerencia? No dudes en contactarnos, estamos
-			para ayudarte.
+	<div class="flex flex-col justify-center items-center pt-20">
+		<h1 class="text-3xl md:text-6xl py-5 font-black">Contacto</h1>
+		<p class="text-center text-xl px-5 max-w-[50ch] text-balance">
+			¡Gracias por tu interés en Australcash! Por favor, completa el
+			siguiente formulario y nos pondremos en contacto contigo lo antes
+			posible!
 		</p>
 		<aside class="m-20">
 			<Form client:visible />

@@ -6,7 +6,7 @@ import WhatsappButton from "./WhatsappButton.astro";
 
 <Container>
 	<article
-		class="flex items-center w-full h-full min-h-screen"
+		class="flex items-center w-full h-full min-h-screen relative"
 		id="hero-section">
 		<!-- <div
 			class="-z-10 absolute h-full w-full bg-[radial-gradient(#fafafa_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_10%,transparent_100%)]">
@@ -147,8 +147,8 @@ import WhatsappButton from "./WhatsappButton.astro";
 				<div class="reflection-7"></div>
 			</div>
 		</div>
-		<WhatsappButton />
 	</article>
+	<WhatsappButton />
 </Container>
 
 <style>
@@ -159,12 +159,15 @@ import WhatsappButton from "./WhatsappButton.astro";
 	#hero-section::before {
 		content: "";
 		position: absolute;
+		margin: auto;
+		right: 0;
+		bottom: 0;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
 		background-image: url("../img/white_logo_only.png");
-		background-size: cover;
+		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
 		opacity: 0.1; /* Opacidad de la imagen de fondo */

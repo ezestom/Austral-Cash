@@ -43,8 +43,11 @@ function DolarComponent() {
 
 	return (
 		<div className="my-20 ">
+			<h1 className="text-3xl text-center font-bold text-white mb-10">
+				Última actualización{" "}
+			</h1>
 			{dolarData ? (
-				<aside className="w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 shadow-2xl  rounded-xl py-10">
+				<aside className="w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 shadow-2xl  rounded-[3rem] ">
 					{dolarData
 						.filter((item) =>
 							["Oficial", "Blue", "Bolsa", "Cripto"].includes(
@@ -53,13 +56,13 @@ function DolarComponent() {
 						)
 						.map((item) => (
 							<article
-								className="relative  w-full items-center justify-between rounded-xl  px-8 hover:cursor-crosshair  p-1 transition hover:brightness-130"
+								className="relative  w-full items-center justify-between rounded-xl  hover:cursor-crosshair   transition hover:brightness-130 "
 								key={item.casa}
 								title={item.fechaActualización}
 								id="article-dolar">
-								<div className="bg-white p-10 rounded-[3rem]">
+								<div className="">
 									<div className="flex flex-col items-center ">
-										<p className="text-base text-black font-semibold flex gap-1 border-b">
+										<p className="text-base text-white font-semibold flex gap-1 border-b">
 											<li className="inline-flex rounded  text-green-500 animate-pulse ">
 												●
 											</li>
@@ -67,7 +70,7 @@ function DolarComponent() {
 											<li>{item.nombre}</li>
 										</p>
 
-										<p className="text-base text-center font-normal text-black py-3">
+										<p className="text-base text-center font-normal text-white py-3">
 											<li>Compra = ${item.compra}</li>
 											<li>Venta = ${item.venta}</li>
 										</p>
