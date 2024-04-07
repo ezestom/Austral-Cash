@@ -83,12 +83,12 @@ export function Form() {
 			</div>
 			<span className=" btn-form">
 				<a
-					className="relative inline-flex h-12 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
+					className="relative inline-flex h-16 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
 					href="#open-dialog"
 					onClick={openDialog}
 					id="open-dialog">
 					<span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-					<span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl b bg-gradient-to-r from-[--bg] to-[--bg3] px-8 py-1  font-medium text-gray-50 backdrop-blur-3xl">
+					<span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl b bg-gradient-to-r from-[--bg] to-[--bg3] px-10  font-bold text-base text-gray-50 backdrop-blur-3xl">
 						Ir al formulario
 						<svg
 							className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
@@ -120,7 +120,7 @@ export function Form() {
 							onSubmit={handleSubmit}
 							method="POST"
 							action="https://formsubmit.co/ezequielstom@gmail.com"
-							className="px-4">
+							className="px-6">
 							{/* <input
 								type="hidden"
 								name="_cc"
@@ -201,7 +201,7 @@ export function Form() {
 										type="text"
 										name="case"
 										id="case"
-										placeholder="Consulta sobre servicios de Austral Cash"
+										placeholder="Quiero cambiar USDT"
 										required
 									/>
 								</label>
@@ -211,7 +211,7 @@ export function Form() {
 										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[#303030]	bg-origin-border p-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-200 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none min-h-[200px]"
 										name="message"
 										id="message"
-										placeholder="Quiero recibir información sobre los servicios de Austral Cash."
+										placeholder="Como puedo cambiar mis USDT a pesos argentinos?"
 										required></textarea>
 								</label>
 								<p>

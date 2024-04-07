@@ -30,23 +30,23 @@ import img3 from "../../icons/wallet.svg";
 		</div>
 		<div class="grid grid-col-1 md:grid-cols-3 my-20 gap-5">
 			<CardSpotlight
-				header="1 -  Cotizas y haces tu pedido."
-				main="Te mostraremos la oferta que tenemos para vos. Elegí el monto y las cuotas antes de continuar. Cuando estés listo, hacé click en el botón 'Continuar'."
-				footer="Completá tu información y validá tu celular."
+				header="1. Selección de Criptomoneda y Monto"
+				main="1 ~ Selecciona la criptomoneda que deseas comprar y el monto que quieres invertir. Te mostraremos la cotización en tiempo real."
+				footer="Una vez seleccionada la criptomoneda y el monto, haz clic en 'Continuar' para proceder."
 				img={img1.src}
 				client:visible
 			/>
 			<CardSpotlight
-				header="1 -  Cotizas y haces tu pedido."
-				main="Te mostraremos la oferta que tenemos para vos. Elegí el monto y las cuotas antes de continuar. Cuando estés listo, hacé click en el botón 'Continuar'."
-				footer="Completá tu información y validá tu celular."
+				header="2. Confirmación de Datos"
+				main="2 ~ Verifica la información proporcionada, asegúrate de que los detalles sean correctos antes de continuar."
+				footer="Proporciona tu dirección de billetera para recibir la criptomoneda."
 				img={img2.src}
 				client:visible
 			/>
 			<CardSpotlight
-				header="1 -  Cotizas y haces tu pedido."
-				main="Te mostraremos la oferta que tenemos para vos. Elegí el monto y las cuotas antes de continuar. Cuando estés listo, hacé click en el botón 'Continuar'."
-				footer="Completá tu información y validá tu celular."
+				header="3. Confirmación de Transacción"
+				main="3 ~ Revisa los detalles de la transacción y confirma para proceder con la compra."
+				footer="Una vez confirmada la transacción, recibirás un correo electrónico de confirmación."
 				img={img3.src}
 				client:visible
 			/>
@@ -71,15 +71,18 @@ import img3 from "../../icons/wallet.svg";
 		background: black;
 		padding: 0 3rem;
 		border-radius: 3rem;
-		scale: 0.8;
-		transform: translateY(300px);
-		opacity: 0.75;
+
 		animation: fade linear both;
 		animation-timeline: scroll(root);
 		animation-range: 0 500px;
 	}
-	@media (width > 768px) {
+	@media (width > 800px) {
 		@keyframes fade {
+			from {
+				scale: 0.8;
+				transform: translateY(300px);
+				opacity: 0.75;
+			}
 			to {
 				scale: 1;
 				transform: translateY(0);
