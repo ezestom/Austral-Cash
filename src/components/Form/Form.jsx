@@ -83,7 +83,7 @@ export function Form() {
 			</div>
 			<span className=" btn-form">
 				<a
-					className="relative inline-flex h-16 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
+					className="relative inline-flex h-14 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
 					href="#open-dialog"
 					onClick={openDialog}
 					id="open-dialog">

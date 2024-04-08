@@ -47,7 +47,7 @@ function DolarComponent() {
 				Última actualización{" "}
 			</h1>
 			{dolarData ? (
-				<aside className="w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 shadow-2xl  rounded-[3rem] ">
+				<aside className="w-full  grid grid-cols-2 md:grid-cols-4 gap-1 shadow-2xl  rounded-[3rem] ">
 					{dolarData
 						.filter((item) =>
 							["Oficial", "Blue", "Bolsa", "Cripto"].includes(
@@ -56,7 +56,7 @@ function DolarComponent() {
 						)
 						.map((item) => (
 							<article
-								className="relative  w-full items-center justify-between rounded-xl  hover:cursor-crosshair   transition hover:brightness-130 "
+								className="relative  w-full items-center justify-between rounded-xl  hover:cursor-crosshair  transition hover:brightness-130 "
 								key={item.casa}
 								title={item.fechaActualización}
 								id="article-dolar">

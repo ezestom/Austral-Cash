@@ -59,7 +59,7 @@ const CardSpotlight = ({ header, main, footer, img }) => {
 					}}
 				/>
 				<article className="h-full w-full flex flex-col justify-between py-12">
-					<header className="text-2xl m-auto md:text-5xl font-black text-black">
+					<header className="text-2xl m-auto md:text-4xl font-black text-black">
 						{header}
 					</header>
 					<img
@@ -75,7 +75,7 @@ const CardSpotlight = ({ header, main, footer, img }) => {
 					className="backdrop-blur-sm bg-transparent flex items-center justify-center rounded-[3rem]">
 					<button
 						onClick={toggleDialog}
-						className="absolute top-40 mx-auto  text-gray-700">
+						className="absolute top-24 md:top-44 mx-auto border-2 border-white rounded-full p-2 ">
 						<img src={close.src} alt="close button" />
 					</button>
 					<aside className="bg-white text-black max-w-[95%] md:w-1/2  md:h-1/2 rounded-[3rem] shadow-xl p-20 ">
