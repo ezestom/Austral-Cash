@@ -75,15 +75,20 @@ const CardSpotlight = ({ header, main, footer, img }) => {
 					className="backdrop-blur-sm bg-transparent flex items-center justify-center rounded-[3rem]">
 					<button
 						onClick={toggleDialog}
-						className="absolute top-24 md:top-44 mx-auto border-2 border-white rounded-full p-2 ">
+						className="absolute top-24 md:top-44 mx-auto border-2 border-white rounded-full p-1 ">
 						<img src={close.src} alt="close button" />
 					</button>
-					<aside className="bg-white text-black max-w-[95%] md:w-1/2  md:h-1/2 rounded-[3rem] shadow-xl p-20 ">
-						<main className="text-xl font-semibold md:text-4xl  ">
+					<aside className="bg-white text-black max-w-[95%] flex flex-col items-center justify-center md:w-1/2  md:h-1/2 rounded-[3rem] shadow-xl p-10 ">
+						<header className=" text-xl md:text-2xl font-bold text-white bg-black/50 rounded-xl py-2 px-4 ">
+							{header}
+						</header>
+						<main className="text-xl font-semibold md:text-4xl py-10 ">
 							{main}
 						</main>
-						<footer className="text-2xl pt-5 font-semibold  ">
-							{footer}
+						<footer>
+							<p className="text-xl md:text-2xl font-bold text-white bg-black/50 rounded-full mb-5 size-10 flex items-center justify-center  ">
+								{footer}
+							</p>
 						</footer>
 					</aside>
 				</dialog>

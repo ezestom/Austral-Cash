@@ -20,33 +20,32 @@ import img3 from "../../icons/wallet.svg";
 		id="price">
 		<DolarComponent client:load />
 		<div class="flex flex-col justify-center items-center">
-			<h1 class="text-3xl md:text-6xl py-5 font-black">
-				Servicio en 3 pasos
+			<h1 class="text-3xl md:text-5xl py-5 font-black text-center">
+				Cambia tu dinero digital en 3 simples pasos
 			</h1>
 			<p class="text-center text-lg px-5 max-w-[75ch] text-balance">
-				Sigue estos 3 pasos para hacer la transacción de manera segura y
-				rápida.
+				Seguridad, rapidez y confianza.
 			</p>
 		</div>
 		<div class="grid grid-col-1 md:grid-cols-3 my-20 gap-5">
 			<CardSpotlight
-				header="1. Selección de Criptomoneda y Monto"
-				main="1 ~ Selecciona la criptomoneda que deseas comprar y el monto que quieres invertir. Te mostraremos la cotización en tiempo real."
-				footer="Una vez seleccionada la criptomoneda y el monto, haz clic en 'Continuar' para proceder."
+				header="Cotizá tu pedido"
+				main="Realiza tu pedido de compra o venta y monto a liquidar."
+				footer="1"
 				img={img1.src}
 				client:visible
 			/>
 			<CardSpotlight
-				header="2. Confirmación de Datos"
-				main="2 ~ Verifica la información proporcionada, asegúrate de que los detalles sean correctos antes de continuar."
-				footer="Proporciona tu dirección de billetera para recibir la criptomoneda."
+				header="Recibí las instrucciones"
+				main="Te vamos a brindar instrucciones paso a paso para realizar la operación."
+				footer="2"
 				img={img2.src}
 				client:visible
 			/>
 			<CardSpotlight
-				header="3. Confirmación de Transacción"
-				main="3 ~ Revisa los detalles de la transacción y confirma para proceder con la compra."
-				footer="Una vez confirmada la transacción, recibirás un correo electrónico de confirmación."
+				header="Recibí el dinero en tu cuenta"
+				main="Una vez que verificamos la transacción, te enviamos el dinero a tu cuenta."
+				footer="3"
 				img={img3.src}
 				client:visible
 			/>
