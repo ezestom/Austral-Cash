@@ -72,7 +72,7 @@ const CardSpotlight = ({ header, main, footer, img }) => {
 			{dialogOpen && (
 				<dialog
 					open
-					className="backdrop-blur-sm bg-transparent flex items-center justify-center rounded-[3rem]">
+					className="backdrop-blur-[.15rem] bg-transparent flex items-center justify-center rounded-[3rem]">
 					<button
 						onClick={toggleDialog}
 						className="absolute top-24 md:top-44 mx-auto border-2 border-white rounded-full p-1 ">

@@ -40,11 +40,19 @@ function DolarComponent() {
 
 		return `${formattedDay}/${formattedMonth}/${year} ${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
 	};
+	
+	const lastUpdate = dolarData ? formatDate(dolarData[0].fechaActualizacion) : null;
+
+	const formatLastUpdate = formatDate(lastUpdate);
+
+
+
 
 	return (
 		<div className="my-20 ">
-			<h1 className="text-3xl text-center font-bold text-white mb-10">
-				Última actualización{" "}
+			<h1 className="text-3xl flex flex-col text-center font-bold text-white mb-10">
+				Última actualización:
+				<span className="text-2xl opacity-75">{formatLastUpdate}</span>
 			</h1>
 			{dolarData ? (
 				<aside className="w-full  grid grid-cols-2 md:grid-cols-4 gap-1 shadow-2xl  rounded-[3rem] ">
