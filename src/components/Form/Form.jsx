@@ -110,7 +110,7 @@ export function Form() {
 				<dialog
 					open
 					className="backdrop-blur bg-transparent h-full flex items-center justify-center">
-					<div className=" flex  w-full items-center justify-center overflow-hidden rounded-lg border border-gray-800 bg-[#202020] shadow-2xl max-w-[400px] h-auto ">
+					<div className=" flex  w-full items-center justify-center overflow-hidden rounded-[3rem] border border-gray-800 bg-[#202020] shadow-2xl max-w-[400px] h-auto ">
 						{isLoading && (
 							<div className="absolute top-0 left-0 right-0 bottom-0 backdrop-blur  opacity-50 flex justify-center items-center z-50">
 								<span class="loader"></span>
@@ -119,7 +119,7 @@ export function Form() {
 						<form
 							onSubmit={handleSubmit}
 							method="POST"
-							action="https://formsubmit.co/ezequielstom@gmail.com"
+							action="https://formsubmit.co/australcash@gmail.com"
 							className="px-6">
 							{/* <input
 								type="hidden"

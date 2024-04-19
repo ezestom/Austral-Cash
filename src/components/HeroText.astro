@@ -1,8 +1,14 @@
+---
+import check from "../icons/check.svg";
+---
+
 <div class="text-white h-full">
 	<h1 class="text-5xl md:text-[6vw] font-black">Australcash</h1>
 	<h2 class="text-2xl py-5 font-semibold">
-		Transferencias Internacionales; <br /> Recibe y envía dinero al exterior <br
-		/>de forma simple y segura 🔐 <br />
+		Recibe y envía dinero al exterior <br />de forma simple y segura <strong
+			>🔐</strong
+		>
+		<br />
 		100% online.
 	</h2>
 	<h3 class="text-xl pb-5">
@@ -13,37 +19,43 @@
 		<div class="flex gap-2">
 			<div
 				class="w-6 h-6 flex gap-8 items-center rounded-full bg-white text-[--bg] -z-1">
-				<p class="m-auto">1</p>
+				<p class="m-auto">
+					<img src={check.src} alt="" />
+				</p>
 			</div>
-			<p class="text-sm md:text-base">Cotizá cambio.</p>
+			<p class="text-sm md:text-base">Cotizá tu pedido.</p>
 		</div>
 
 		<div class="flex gap-2">
 			<div
 				class="w-6 h-6 flex gap-8 items-center rounded-full bg-white text-[--bg] -z-1">
-				<p class="m-auto">2</p>
+				<p class="m-auto">
+					<img src={check.src} alt="" />
+				</p>
 			</div>
-			<p class="text-sm md:text-base">Recibí las instrucciones.</p>
+			<p class="text-sm md:text-base">Obtené las instrucciones.</p>
 		</div>
 
 		<div class="flex gap-2">
 			<div
 				class="w-6 h-6 flex gap-8 items-center rounded-full bg-white text-[--bg] -z-1">
-				<p class="m-auto">3</p>
+				<p class="m-auto">
+					<img src={check.src} alt="" />
+				</p>
 			</div>
-			<p class="text-sm md:text-base">Recibí el dinero en tu cuenta.</p>
+			<p class="text-sm md:text-base">Enviamos el dinero a tu cuenta.</p>
 		</div>
 	</aside>
-
-	<style>
-		h1 {
-			/* background: linear-gradient(0deg, #514fff, #ecf0ff); */
-			background: linear-gradient(0deg, white, #ecf0ff);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-		strong {
-			filter: drop-shadow(0 0 0.5rem white);
-		}
-	</style>
 </div>
+
+<style>
+	h1 {
+		/* background: linear-gradient(0deg, #514fff, #ecf0ff); */
+		background: linear-gradient(0deg, white, #ecf0ff);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	strong {
+		filter: drop-shadow(0 0 0.5rem white);
+	}
+</style>
