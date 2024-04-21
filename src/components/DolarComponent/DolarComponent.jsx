@@ -48,10 +48,10 @@ function DolarComponent() {
 	const formatLastUpdate = formatDate(lastUpdate);
 
 	return (
-		<div className="absolute left-0 right-0 m-auto bottom-0 w-full  max-w-screen-2xl overflow-hidden mx-auto px-4 lg:px-20 xl:px-16 pb-5">
+		<div className="absolute left-0 right-0 m-auto bottom-0 w-full  max-w-screen-2xl overflow-hidden mx-auto px-4 lg:px-20 xl:px-16 pb-5 ">
 			{dolarData ? (
 				<aside
-					className="w-full flex justify-between  overflow-hidden  "
+					className="w-full flex justify-between  overflow-hidden opacity-75 "
 					id="price-slider">
 					{dolarData
 						.filter((item) =>
@@ -61,7 +61,7 @@ function DolarComponent() {
 						)
 						.map((item) => (
 							<article
-								className=" "
+								className="whitespace-nowrap"
 								key={item.casa}
 								title={item.fechaActualización}
 								id="article-dolar">

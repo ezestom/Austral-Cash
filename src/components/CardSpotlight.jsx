@@ -46,7 +46,7 @@ const CardSpotlight = ({ header, main, footer, img }) => {
 	return (
 		<button
 			onClick={toggleDialog}
-			className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-[3rem] bg-white min-h-[275px] focus:outline-none">
+			className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-[3rem] bg-white min-h-[275px] focus:outline-none shadow-md shadow-black">
 			<div
 				ref={divRef}
 				onMouseMove={handleMouseMove}
@@ -63,7 +63,7 @@ const CardSpotlight = ({ header, main, footer, img }) => {
 					}}
 				/>
 				<article className="h-full w-full flex flex-col justify-between py-12">
-					<header className="text-2xl m-auto md:text-4xl font-black text-black">
+					<header className="text-2xl m-auto md:text-4xl font-bold text-black">
 						{header}
 					</header>
 				</article>
