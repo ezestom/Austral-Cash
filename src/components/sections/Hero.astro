@@ -1,11 +1,13 @@
 ---
 import Mobile from "../Mobile.astro";
 import AppHeader from "../AppHeader.astro";
+import DolarComponent from "../DolarComponent/DolarComponent.jsx";
 ---
 
 <section id="top" class="relative">
 	<AppHeader />
 	<Mobile />
+	<DolarComponent client:load />
 </section>
 
 <style></style>

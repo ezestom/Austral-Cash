@@ -40,22 +40,19 @@ function DolarComponent() {
 
 		return `${formattedDay}/${formattedMonth}/${year} ${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
 	};
-	
-	const lastUpdate = dolarData ? formatDate(dolarData[0].fechaActualizacion) : null;
+
+	const lastUpdate = dolarData
+		? formatDate(dolarData[0].fechaActualizacion)
+		: null;
 
 	const formatLastUpdate = formatDate(lastUpdate);
 
-
-
-
 	return (
-		<div className="my-20 ">
-			<h1 className="text-3xl flex flex-col text-center font-bold text-white mb-10">
-				Última actualización:
-				<span className="text-2xl opacity-75">{formatLastUpdate}</span>
-			</h1>
+		<div className="absolute left-0 right-0 m-auto bottom-0 w-full  max-w-screen-2xl overflow-hidden mx-auto px-4 lg:px-20 xl:px-16 pb-5">
 			{dolarData ? (
-				<aside className="w-full  grid grid-cols-2 md:grid-cols-4 gap-1 shadow-2xl  rounded-[3rem] ">
+				<aside
+					className="w-full flex justify-between  overflow-hidden  "
+					id="price-slider">
 					{dolarData
 						.filter((item) =>
 							["Oficial", "Blue", "Bolsa", "Cripto"].includes(
@@ -64,21 +61,21 @@ function DolarComponent() {
 						)
 						.map((item) => (
 							<article
-								className="relative  w-full items-center justify-between rounded-xl  hover:cursor-crosshair  transition hover:brightness-130 "
+								className=" "
 								key={item.casa}
 								title={item.fechaActualización}
 								id="article-dolar">
 								<div className="">
-									<div className="flex flex-col items-center ">
-										<p className="text-base text-white font-semibold flex gap-1 border-b">
-											<li className="inline-flex rounded  text-green-500 animate-pulse ">
+									<div className="flex  items-center ">
+										<p className="text-sm text-white font-semibold flex gap-1 pr-2 ">
+											<li className="inline-flex rounded  text-green-500 animate-pulse  ">
 												●
 											</li>
 											<li>{item.moneda}</li>
 											<li>{item.nombre}</li>
 										</p>
 
-										<p className="text-base text-center font-normal text-white py-3">
+										<p className="text-sm text-center font-normal text-white py-3 flex gap-2">
 											<li>Compra = ${item.compra}</li>
 											<li>Venta = ${item.venta}</li>
 										</p>

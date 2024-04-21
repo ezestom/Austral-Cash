@@ -37,6 +37,10 @@ const CardSpotlight = ({ header, main, footer, img }) => {
 
 	const toggleDialog = () => {
 		setDialogOpen(!dialogOpen); // Invierte el estado de dialogOpen
+		// document.body.style.overflow = dialogOpen ? "auto" : "hidden";
+
+		
+
 	};
 
 	return (
@@ -62,23 +66,18 @@ const CardSpotlight = ({ header, main, footer, img }) => {
 					<header className="text-2xl m-auto md:text-4xl font-black text-black">
 						{header}
 					</header>
-					<img
-						src={img}
-						alt={`image of ${img}`}
-						className="w-auto max-h-[350px] absolute bottom-0 right-0 transform opacity-5 pointer-events-none rotate-[25deg]"
-					/>
 				</article>
 			</div>
 			{dialogOpen && (
 				<dialog
 					open
 					className="backdrop-blur-[.15rem] bg-transparent flex items-center justify-center rounded-[3rem]">
-					<button
-						onClick={toggleDialog}
-						className="absolute top-24 md:top-44 mx-auto border-2 border-white rounded-full p-1 ">
-						<img src={close.src} alt="close button" />
-					</button>
-					<aside className="bg-white text-black max-w-[95%] flex flex-col items-center justify-center md:w-1/2  md:h-1/2 rounded-[3rem] shadow-xl p-10 ">
+					<aside className="bg-white text-black max-w-[95%] flex flex-col items-center justify-center md:w-1/2  md:h-1/2 rounded-[3rem] shadow-md shadow-black p-10 ">
+						<button
+							onClick={toggleDialog}
+							className=" mx-auto border-2 border-black my-5 rounded-full p-1 ">
+							<img src={close.src} alt="close button" />
+						</button>
 						<header className=" text-xl md:text-2xl font-bold text-white bg-black/50 rounded-xl py-2 px-4 ">
 							{header}
 						</header>

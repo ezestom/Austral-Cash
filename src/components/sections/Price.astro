@@ -1,6 +1,5 @@
 ---
 import Container from "../Container.astro";
-import DolarComponent from "../DolarComponent/DolarComponent.jsx";
 import Fader from "../Fader.astro";
 import wise from "../../icons/banks/wise.webp";
 import uala from "../../icons/banks/uala.webp";
@@ -12,13 +11,13 @@ import CardSpotlight from "../CardSpotlight.jsx";
 import img1 from "../../icons/calculator.svg";
 import img2 from "../../icons/whatsapp.svg";
 import img3 from "../../icons/wallet.svg";
+import video from "../../video/bussines.mp4";
 ---
 
 <Container>
 	<article
 		class="min-h-screen flex flex-col justify-center text-white mb-20 relative"
 		id="price">
-		<DolarComponent client:load />
 		<div class="flex flex-col justify-center items-center">
 			<h1 class="text-3xl md:text-5xl py-5 font-black text-center">
 				Cambia tu dinero digital en 3 simples pasos
@@ -50,6 +49,15 @@ import img3 from "../../icons/wallet.svg";
 				client:visible
 			/>
 		</div>
+		<div>
+			<video
+				src={video}
+				autoplay
+				loop
+				muted
+				class="absolute mx-auto right-0 left-0 bottom-0 w-full h-auto opacity-10 rounded-[3rem] top-0 -z-10"
+			></video>
+		</div>
 	</article>
 	<Fader
 		img1={wise.src}
@@ -67,7 +75,7 @@ import img3 from "../../icons/wallet.svg";
 
 <style>
 	article {
-		background: black;
+		/* background: black; */
 		padding: 0 3rem;
 		border-radius: 3rem;
 
