@@ -38,9 +38,6 @@ const CardSpotlight = ({ header, main, footer, img }) => {
 	const toggleDialog = () => {
 		setDialogOpen(!dialogOpen); // Invierte el estado de dialogOpen
 		// document.body.style.overflow = dialogOpen ? "auto" : "hidden";
-
-		
-
 	};
 
 	return (
@@ -72,10 +69,10 @@ const CardSpotlight = ({ header, main, footer, img }) => {
 				<dialog
 					open
 					className="backdrop-blur-[.15rem] bg-transparent flex items-center justify-center rounded-[3rem]">
-					<aside className="bg-white text-black max-w-[95%] flex flex-col items-center justify-center md:w-1/2  md:h-1/2 rounded-[3rem] shadow-md shadow-black p-10 ">
+					<aside className="bg-white text-black max-w-[95%] flex flex-col items-center justify-center md:w-1/2  md:h-[60vh] rounded-[3rem] shadow-md shadow-black h-full px-10 ">
 						<button
 							onClick={toggleDialog}
-							className=" mx-auto border-2 border-black my-5 rounded-full p-1 ">
+							className=" mx-auto pb-2">
 							<img src={close.src} alt="close button" />
 						</button>
 						<header className=" text-xl md:text-2xl font-bold text-white bg-black/50 rounded-xl py-2 px-4 ">

@@ -83,12 +83,12 @@ export function Form() {
 			</div>
 			<span className=" btn-form">
 				<a
-					className="relative inline-flex h-14 overflow-hidden rounded-xl p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105"
+					className="relative inline-flex h-14 overflow-hidden rounded-[3rem] p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105 border" 
 					href="#open-dialog"
 					onClick={openDialog}
 					id="open-dialog">
 					<span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-					<span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-xl b bg-gradient-to-r from-[--bg] to-[--bg3] px-10  font-bold text-base text-gray-50 backdrop-blur-3xl">
+					<span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-[3rem] b bg-gradient-to-r from-[--bg] to-[--bg3] px-10  font-bold text-base text-gray-50 backdrop-blur-3xl">
 						Ir al formulario
 						<svg
 							className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
