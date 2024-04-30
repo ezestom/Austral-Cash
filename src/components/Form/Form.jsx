@@ -82,9 +82,8 @@ export function Form() {
 				</a>
 			</div>
 			<span className=" btn-form">
-				<a
-					className="relative inline-flex h-14 overflow-hidden rounded-[3rem] p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105 border" 
-					href="#open-dialog"
+				<button
+					className="relative inline-flex h-14 overflow-hidden rounded-[3rem] p-[1px] focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 transition hover:scale-105 border"
 					onClick={openDialog}
 					id="open-dialog">
 					<span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
@@ -103,7 +102,7 @@ export function Form() {
 								d="M1 5h12m0 0L9 1m4 4L9 9"></path>
 						</svg>
 					</span>
-				</a>
+				</button>
 			</span>
 
 			{dialog && (
@@ -147,17 +146,16 @@ export function Form() {
 								value="false"
 							/>
 							<legend>
-								<a
-									className="flex justify-center my-2"
-									href="/#contact"
+								<button
+									className="flex justify-center items-center w-full bg "
 									id="close-dialog"
 									onClick={closeDialog}>
 									<img
-										className=" pt-5"
+										className=" bg-[#303030] rounded hover:bg-[#262626] transition mt-5"
 										src={x.src}
 										alt="x-icon"
 									/>
-								</a>
+								</button>
 							</legend>
 
 							<div className="flex flex-col gap-2 min-w-[350px] text-slate-200">
@@ -208,7 +206,7 @@ export function Form() {
 								<label htmlFor="message">
 									Mensaje
 									<textarea
-										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[#303030]	bg-origin-border p-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-200 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none min-h-[200px]"
+										className="border-1 block h-12 w-full rounded-md border border-double border-slate-800 border-transparent bg-[#303030]	bg-origin-border p-2 text-slate-200 transition-all duration-500 [background-clip:padding-box,_border-box] placeholder:text-slate-200 focus:bg-[linear-gradient(#000,#000),linear-gradient(to_right,#c7d2fe,#8678f9)] focus:outline-none min-h-[100px]"
 										name="message"
 										id="message"
 										placeholder="Como puedo cambiar mis USDT a pesos argentinos?"

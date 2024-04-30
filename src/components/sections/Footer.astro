@@ -5,7 +5,7 @@ import Container from "../Container.astro";
 import instagram from "../../icons/instagram.svg";
 import twitter from "../../icons/twitter.svg";
 import linkedin from "../../icons/linkedin.svg";
-import facebook from "../../icons/facebook.svg";
+import { LegalDialog } from "../LegalDialog/LegalDialog.jsx";
 ---
 
 <footer>
@@ -73,14 +73,21 @@ import facebook from "../../icons/facebook.svg";
 						</h2>
 						<ul class="text-gray-100">
 							<li class="mb-4 text-sm">
-								<a href="#" class="hover:underline"
-									>Privacidad</a
-								>
+								<LegalDialog
+									client:visible
+									anchor="Privacidad"
+									title="Política de Privacidad"
+									paragraph="  AustralCash respeta su privacidad y se compromete a proteger la información personal que pueda proporcionar mientras utiliza nuestro sitio web. Esta política de privacidad describe cómo recopilamos y utilizamos la información personal que proporciona en nuestro sitio web. Al utilizar nuestro sitio web, acepta las prácticas descritas en esta política de privacidad. Si no está de acuerdo con esta política de privacidad, no utilice nuestro sitio web. Nos reservamos el derecho de realizar cambios a esta política en cualquier momento. Por favor, consulte la política de privacidad periódicamente."
+								/>
 							</li>
+
 							<li class="text-sm">
-								<a href="#" class="hover:underline"
-									>Terminos &amp; Condiciones</a
-								>
+								<LegalDialog
+									client:visible
+									anchor=`Terminos & Condiciones`
+									title="Términos y Condiciones"
+									paragraph="  Al acceder a este sitio web, usted acepta estar sujeto a estos términos y condiciones de uso, todas las leyes y regulaciones aplicables, y acepta que es responsable del cumplimiento de las leyes locales aplicables. Si no está de acuerdo con alguno de estos términos, se le prohíbe utilizar o acceder a este sitio. Los materiales contenidos en este sitio web están protegidos por las leyes de derechos de autor y marcas comerciales aplicables."
+								/>
 							</li>
 						</ul>
 					</div>
